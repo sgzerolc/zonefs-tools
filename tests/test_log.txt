@@ -1,7 +1,7 @@
 [sam@resources tests]$ sudo ./zonefs-tests.sh /dev/vda
 Gathering information on /dev/vda...
 zonefs-tests on /dev/vda:
-  12 zones (4 conventional zones, 8 sequential zones)
+  12 zones (0 conventional zones, 12 sequential zones)
   131072 512B sectors zone size (64 MiB)
   0 max open zones
   0 max active zones
@@ -15,45 +15,45 @@ Running tests
   Test 0022:  mount (check mount directory sub-directories)        ... PASS
   Test 0023:  mount (options)                                      ... PASS
   Test 0040:  Number of files (default)                            ... PASS
-  Test 0041:  Number of files (aggr_cnv)                           ... PASS
+  Test 0041:  Number of files (aggr_cnv)                           ... skip
   Test 0042:  Number of files using stat (default)                 ... PASS
-  Test 0043:  Number of files using stat (aggr_cnv)                ... PASS
+  Test 0043:  Number of files using stat (aggr_cnv)                ... skip
   Test 0044:  Number of blocks using stat (default)                ... FAIL
   Test 0045:  Number of blocks using stat (aggr_cnv)               ... FAIL
   Test 0060:  Files permissions (default)                          ... PASS
-  Test 0061:  Files permissions (aggr_cnv)                         ... PASS
+  Test 0061:  Files permissions (aggr_cnv)                         ... skip
   Test 0062:  Files permissions (set value)                        ... PASS
-  Test 0063:  Files permissions (set value + aggr_cnv)             ... PASS
+  Test 0063:  Files permissions (set value + aggr_cnv)             ... skip
   Test 0080:  Files owner (default)                                ... PASS
-  Test 0081:  Files owner (aggr_cnv)                               ... PASS
+  Test 0081:  Files owner (aggr_cnv)                               ... skip
   Test 0082:  Files owner (set value)                              ... PASS
-  Test 0083:  Files owner (set value + aggr_cnv)                   ... PASS
+  Test 0083:  Files owner (set value + aggr_cnv)                   ... skip
   Test 0100:  Files size (default)                                 ... PASS
-  Test 0101:  Files size (aggr_cnv)                                ... PASS
-  Test 0200:  Conventional file truncate                           ... PASS
-  Test 0201:  Conventional file truncate (aggr_cnv)                ... PASS
-  Test 0202:  Conventional file unlink                             ... PASS
-  Test 0203:  Conventional file unlink (aggr_cnv)                  ... PASS
-  Test 0204:  Conventional file random write                       ... PASS
-  Test 0205:  Conventional file random write (direct)              ... PASS
-  Test 0206:  Conventional file random write (aggr_cnv)            ... PASS
-  Test 0207:  Conventional file random write (aggr_cnv, direct)    ... PASS
-  Test 0208:  Conventional file mmap read/write                    ... PASS
-  Test 0209:  Conventional file mmap read/write (aggr_cnv)         ... PASS
-  Test 0210:  Conventional file seq write                          ... PASS
-  Test 0211:  Conventional file seq write (direct)                 ... PASS
-  Test 0212:  Conventional file seq write (aggr_cnv)               ... PASS
-  Test 0213:  Conventional file seq write (aggr_cnv, direct)       ... PASS
-  Test 0214:  Conventional file seq write (large IOs)              ... PASS
-  Test 0215:  Conventional file seq write (aggr_cnv, large IOs)    ... PASS
-  Test 0216:  Conventional file seq read                           ... PASS
-  Test 0217:  Conventional file seq read (direct)                  ... PASS
-  Test 0218:  Conventional file seq read (aggr_cnv)                ... PASS
-  Test 0219:  Conventional file seq read (aggr_cnv, direct)        ... PASS
-  Test 0220:  Conventional file seq read (large IOs)               ... PASS
-  Test 0221:  Conventional file seq read (aggr_cnv, large IOs)     ... PASS
-  Test 0222:  Conventional file readahead                          ... PASS
-  Test 0223:  Conventional file read beyond eof                    ... PASS
+  Test 0101:  Files size (aggr_cnv)                                ... skip
+  Test 0200:  Conventional file truncate                           ... skip
+  Test 0201:  Conventional file truncate (aggr_cnv)                ... skip
+  Test 0202:  Conventional file unlink                             ... skip
+  Test 0203:  Conventional file unlink (aggr_cnv)                  ... skip
+  Test 0204:  Conventional file random write                       ... skip
+  Test 0205:  Conventional file random write (direct)              ... skip
+  Test 0206:  Conventional file random write (aggr_cnv)            ... skip
+  Test 0207:  Conventional file random write (aggr_cnv, direct)    ... skip
+  Test 0208:  Conventional file mmap read/write                    ... skip
+  Test 0209:  Conventional file mmap read/write (aggr_cnv)         ... skip
+  Test 0210:  Conventional file seq write                          ... skip
+  Test 0211:  Conventional file seq write (direct)                 ... skip
+  Test 0212:  Conventional file seq write (aggr_cnv)               ... skip
+  Test 0213:  Conventional file seq write (aggr_cnv, direct)       ... skip
+  Test 0214:  Conventional file seq write (large IOs)              ... skip
+  Test 0215:  Conventional file seq write (aggr_cnv, large IOs)    ... skip
+  Test 0216:  Conventional file seq read                           ... skip
+  Test 0217:  Conventional file seq read (direct)                  ... skip
+  Test 0218:  Conventional file seq read (aggr_cnv)                ... skip
+  Test 0219:  Conventional file seq read (aggr_cnv, direct)        ... skip
+  Test 0220:  Conventional file seq read (large IOs)               ... skip
+  Test 0221:  Conventional file seq read (aggr_cnv, large IOs)     ... skip
+  Test 0222:  Conventional file readahead                          ... skip
+  Test 0223:  Conventional file read beyond eof                    ... skip
   Test 0300:  Sequential file truncate                             ... PASS
   Test 0301:  Sequential file unlink                               ... PASS
   Test 0302:  Sequential file buffered write IO                    ... PASS
@@ -67,19 +67,21 @@ Running tests
   Test 0311:  Sequential file large synchronous write              ... PASS
   Test 0312:  Sequential file explicit-open zone resources         ... skip
   Test 0320:  Sequential file random read (buffered)               ... PASS
-  Test 0321:  Sequential file random read (direct)                 ... FAIL
-  Test 0322:  Sequential file seq read (buffered)                  ... FAIL
-  Test 0323:  Sequential file seq read (direct)                    ... FAIL
+  Test 0321:  Sequential file random read (direct)                 ... PASS
+  Test 0322:  Sequential file seq read (buffered)                  ... PASS
+  Test 0323:  Sequential file seq read (direct)                    ... PASS
   Test 0324:  Sequential file readahead                            ... PASS
   Test 0325:  Sequential file read beyond eof                      ... FAIL
-  Test 0400:  Swap file on conventional file                       ... PASS
-  Test 0401:  Swap file on sequential file                         ... FAIL
-  Test 0510:  Sysfs attr after format                              ... FAIL
-  Test 0511:  Sysfs seq files active after mount (open zones)      ... FAIL
-  Test 0512:  Sysfs seq files active after mount (active zones)    ... FAIL
-  Test 0513:  Sysfs seq files write-open (default)                 ... FAIL
-  Test 0514:  Sysfs seq files write-open (explicit-open)           ... FAIL
+  Test 0400:  Swap file on conventional file                       ... skip
+  Test 0401:  Swap file on sequential file                         ... PASS
+  Test 0510:  Sysfs attr after format                              ... PASS
+  Test 0511:  Sysfs seq files active after mount (open zones)      ... PASS
+  Test 0512:  Sysfs seq files active after mount (active zones)    ... PASS
+  Test 0513:  Sysfs seq files write-open (default)                 ... PASS
+  Test 0514:  Sysfs seq files write-open (explicit-open)           ... PASS
   Test 0515:  Sysfs seq files active after write (default)         ... FAIL
-  Test 0516:  Sysfs conv files write-open                          ... FAIL
-  Test 0517:  Sysfs conv files active after write                  ... FAIL
+  Test 0516:  Sysfs conv files write-open                          ... skip
+  Test 0517:  Sysfs conv files active after write                  ... skip
+
+69 / 76 tests passed
 
