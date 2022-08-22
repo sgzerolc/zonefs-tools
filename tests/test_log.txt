@@ -85,3 +85,34 @@ Running tests
 
 69 / 76 tests passed
 
+## Test scripts/0306.sh (Sequential file append (sync))
+
+Check sequential file append (sync)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: f428f19a-9920-49fd-a5e9-5718f8a73419
+Resetting sequential zones
+Writing super block
+Check append writes with O_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000375049 s, 10.9 MB/s
+497 IOs done in 75 ms (75892 us)
+    6548 IOPS, 885.185 MB/s
+Check append writes with RWF_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000341518 s, 12.0 MB/s
+00000: WRITE 135168 B at 0 failed 5 (Input/output error)
+ --> FAILED
+FAILED
+
