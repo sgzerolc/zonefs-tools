@@ -1,0 +1,114 @@
+[root@10 sam]# blkzone report /dev/vda
+  start: 0x000000000, len 0x020000, cap 0x020000, wptr 0x020000 reset:0 non-seq:0, zcond:14(fu) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000020000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000040000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000060000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000080000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000a0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000c0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000e0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000100000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000120000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000140000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000160000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+[root@10 sam]# perf record -a -e block:\* dd if=/dev/zero of=/mnt/seq/0 oflag=direct,append bs=4096 count=1 conv=notrunc
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000414203 s, 9.9 MB/s
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 0.824 MB perf.data (16 samples) ]
+[root@10 sam]# perf script
+       perf-exec  2326 [003]   134.629496:      block:block_bio_remap: 252,16 RA 44227736 + 32 <- (252,17) 44225688
+       perf-exec  2326 [003]   134.629498:      block:block_bio_queue: 252,16 RA 44227736 + 32 [perf-exec]
+       perf-exec  2326 [003]   134.629501:          block:block_getrq: 252,16 RA 44227736 + 32 [perf-exec]
+       perf-exec  2326 [003]   134.629502:           block:block_plug: [perf-exec]
+       perf-exec  2326 [003]   134.629504:       block:block_rq_issue: 252,16 RA 16384 () 44227736 + 32 [perf-exec]
+         swapper     0 [003]   134.629610:    block:block_rq_complete: 252,16 RA () 44227736 + 32 [0]
+              dd  2326 [003]   134.629859:      block:block_bio_remap: 252,16 RA 44227768 + 128 <- (252,17) 44225720
+              dd  2326 [003]   134.629860:      block:block_bio_queue: 252,16 RA 44227768 + 128 [dd]
+              dd  2326 [003]   134.629861:          block:block_getrq: 252,16 RA 44227768 + 128 [dd]
+              dd  2326 [003]   134.629862:           block:block_plug: [dd]
+              dd  2326 [003]   134.629862:       block:block_rq_issue: 252,16 RA 65536 () 44227768 + 128 [dd]
+         swapper     0 [003]   134.630110:    block:block_rq_complete: 252,16 RA () 44227768 + 128 [0]
+              dd  2326 [003]   134.630601:      block:block_bio_queue: 252,0 NS 131072 + 8 [dd]
+              dd  2326 [003]   134.630603:          block:block_getrq: 252,0 NS 131072 + 8 [dd]
+              dd  2326 [003]   134.630604:       block:block_rq_issue: 252,0 NS 4096 () 131072 + 8 [dd]
+         swapper     0 [003]   134.630891:    block:block_rq_complete: 252,0 NS () 0 + 8 [0]
+
+  start: 0x000000000, len 0x020000, cap 0x020000, wptr 0x020000 reset:0 non-seq:0, zcond:14(fu) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000020000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000040000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000060000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000080000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000a0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000c0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000e0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000100000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000120000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000140000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000160000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+
+# reboot, then use btrace
+252,0    2        1     0.000000000  2336  Q  WS 131072 + 8 [dd]
+252,0    2        2     0.000017328  2336  G  WS 131072 + 8 [dd]
+252,0    2        3     0.000020220  2336  D  WS 131072 + 8 [dd]
+252,0    2        4     0.000696645  1539  C  WS 0 + 8 [65531]
+252,0    2        5     0.005510433  2336  D   R 128 [dd]
+252,0    2        6     0.005798212  1539  C   R [0]
+CPU2 (252,0):
+ Reads Queued:           0,        0KiB	 Writes Queued:           1,        4KiB
+ Read Dispatches:        0,        0KiB	 Write Dispatches:        1,        4KiB
+ Reads Requeued:         0		 Writes Requeued:         0
+ Reads Completed:        0,        0KiB	 Writes Completed:        1,        4KiB
+ Read Merges:            0,        0KiB	 Write Merges:            0,        0KiB
+ Read depth:             1        	 Write depth:             1
+ PC Reads Queued:        0,        0KiB	 PC Writes Queued:        0,        0KiB
+ PC Read Disp.:          1,        0KiB	 PC Write Disp.:          0,        0KiB
+ PC Reads Req.:          0		 PC Writes Req.:          0
+ PC Reads Compl.:        1		 PC Writes Compl.:        0
+ IO unplugs:             0        	 Timer unplugs:           0
+
+Throughput (R/W): 0KiB/s / 800KiB/s
+Events (252,0): 6 entries
+Skips: 0 forward (0 -   0.0%)
+Trace started at Sun Sep  4 22:27:51 2022
+
+  start: 0x000000000, len 0x020000, cap 0x020000, wptr 0x020000 reset:0 non-seq:0, zcond:14(fu) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000020000, len 0x020000, cap 0x020000, wptr 0x000008 reset:0 non-seq:0, zcond: 2(oi) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000040000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000060000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000080000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000a0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000c0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x0000e0000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000100000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000120000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000140000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+  start: 0x000160000, len 0x020000, cap 0x020000, wptr 0x000000 reset:0 non-seq:0, zcond: 1(em) [type: 2(SEQ_WRITE_REQUIRED)]
+
+# reboot, using blktrace, blkparse
+252,0    3        1     0.000000000  2279  Q  WS 131072 + 8 [dd]
+252,0    3        2     0.000006490  2279  G  WS 131072 + 8 [dd]
+252,0    3        3     0.000009310  2279  D  WS 131072 + 8 [dd]
+252,0    3        4     0.000647413     0  C  WS 0 + 8 [65531]
+252,0    3        5     0.000727190  2279  D   R 128 [dd]
+252,0    3        6     0.001003668     0  C   R [0]
+CPU3 (vda):
+ Reads Queued:           0,        0KiB	 Writes Queued:           1,        4KiB
+ Read Dispatches:        0,        0KiB	 Write Dispatches:        1,        4KiB
+ Reads Requeued:         0		 Writes Requeued:         0
+ Reads Completed:        0,        0KiB	 Writes Completed:        1,        4KiB
+ Read Merges:            0,        0KiB	 Write Merges:            0,        0KiB
+ Read depth:             1        	 Write depth:             1
+ PC Reads Queued:        0,        0KiB	 PC Writes Queued:        0,        0KiB
+ PC Read Disp.:          1,        0KiB	 PC Write Disp.:          0,        0KiB
+ PC Reads Req.:          0		 PC Writes Req.:          0
+ PC Reads Compl.:        1		 PC Writes Compl.:        0
+ IO unplugs:             0        	 Timer unplugs:           0
+
+Throughput (R/W): 0KiB/s / 4,000KiB/s
+Events (vda): 6 entries
+Skips: 0 forward (0 -   0.0%)
+Trace started at Sun Sep  4 22:37:49 2022
+
+Input file vda.blktrace.3 added
