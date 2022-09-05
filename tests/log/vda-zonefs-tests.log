@@ -1,0 +1,1846 @@
+## Test scripts/0001.sh (mkzonefs (options))
+
+Check mkzonefs command: mkzonefs  /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: f74f583a-28ac-4f85-a7e7-779d3eaa82df
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -h /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs --help /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs --help /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs -v /dev/vda
+Zone 00000: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 0, 131072 sectors, wp sector 0
+Zone 00001: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 131072, 131072 sectors, wp sector 131072
+Zone 00002: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 262144, 131072 sectors, wp sector 262144
+Zone 00003: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 393216, 131072 sectors, wp sector 393216
+Zone 00004: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 524288, 131072 sectors, wp sector 524288
+Zone 00005: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 655360, 131072 sectors, wp sector 655360
+Zone 00006: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 786432, 131072 sectors, wp sector 786432
+Zone 00007: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 917504, 131072 sectors, wp sector 917504
+Zone 00008: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1048576, 131072 sectors, wp sector 1048576
+Zone 00009: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1179648, 131072 sectors, wp sector 1179648
+Zone 00010: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1310720, 131072 sectors, wp sector 1310720
+Zone 00011: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1441792, 131072 sectors, wp sector 1441792
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a4e5b192-ade2-4e63-974b-c1d61e9d226b
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -f /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 3690ed1b-9f54-4eea-b118-66e1830d6073
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o aggr_cnv /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b47a91e0-c22b-427e-8296-362eb54e0e2e
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o uid=0 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: c4941090-14d2-469e-ab3f-1b7e79edc79d
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o gid=0 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 08d3690e-6a71-4937-8a95-76381b6b7ab0
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o perm=777 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: 72a0e30e-7d68-4087-b50f-ea497540182f
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o aggr_cnv,uid=0,gid=0,perm=777 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: e1690163-5d23-4352-9706-1abe62493460
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -bad-option /dev/vda
+Invalid option '-bad-option'
+Check mkzonefs command: mkzonefs -o /dev/vda
+Invalid command line
+Check mkzonefs command: mkzonefs -o invalid_feature /dev/vda
+Invalid feature string
+Check mkzonefs command: mkzonefs -o invalid,,list /dev/vda
+Invalid feature string
+PASS
+
+## Test scripts/0002.sh (mkzonefs (force format))
+
+scripts/0002.sh: line 13: require_program: command not found
+scripts/0002.sh: line 16: mkfs.f2fs: command not found
+scripts/0002.sh: line 16: exit_failed: command not found
+Check mkzonefs with used super block and not forced
+/dev/vda appears to contain an existing filesystem (zonefs)
+Use the option '-f' to overwrite
+Check mkzonefs with used super block and forced
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a0a608f3-0964-4cd5-894b-0c3b02b1e38d
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0003.sh (mkzonefs (invalid device))
+
+# Trying /dev/console
+/dev/console is not a block device
+# Trying regular block device /dev/nullb0
+nullb0: Not a zoned block device
+PASS
+
+## Test scripts/0004.sh (mkzonefs (super block zone state))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ae374168-c951-4ab2-9d8d-2bcb7cbbd014
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0020.sh (mount (default))
+
+Check default mount
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 5b09ddb3-7b07-4e5a-9d63-b921fe41a71f
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0021.sh (mount (invalid device))
+
+Check mount with invalid device
+mount: /home/sam/zonefs-tools/tests/vda-mnt: /dev/console is not a block device.
+       dmesg(1) may have more information after failed mount system call.
+Check mount with non-zoned block device
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/nullb0, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+PASS
+
+## Test scripts/0022.sh (mount (check mount directory sub-directories))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a15bfae0-d3f9-4306-8c3a-423bdd71b78c
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0023.sh (mount (options))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 2a365059-d0ea-4be9-b452-7f21f1ebdc30
+Resetting sequential zones
+Writing super block
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+PASS
+
+## Test scripts/0040.sh (Number of files (default))
+
+Check for number of files: 0 cnv, 11 seq
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: f7ff7b46-c27a-4857-8cb7-f9b684a7a591
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0041.sh (Number of files (aggr_cnv))
+
+skip
+
+## Test scripts/0042.sh (Number of files using stat (default))
+
+Check for number of files: 0 cnv, 11 seq
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 92919ec1-e295-4fa5-9d2d-0ad1fbd837dc
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0043.sh (Number of files using stat (aggr_cnv))
+
+skip
+
+## Test scripts/0044.sh (Number of blocks using stat (default))
+
+Check for number of blocks for the file system
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 47377b6c-91af-4cd4-9986-8a6a34f14f30
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0045.sh (Number of blocks using stat (aggr_cnv))
+
+Check for number of blocks of the file system
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 76708a86-7b36-434c-80ad-4a3cdfc95a87
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0060.sh (Files permissions (default))
+
+Check for files permission 640
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a313c4f7-531b-487b-b175-3e2ba4146911
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0061.sh (Files permissions (aggr_cnv))
+
+skip
+
+## Test scripts/0062.sh (Files permissions (set value))
+
+Check for files permission 770
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 770
+  FS UUID: d0ef42b1-9d8d-41fd-8ae9-9ca3ece3a3ab
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0063.sh (Files permissions (set value + aggr_cnv))
+
+skip
+
+## Test scripts/0080.sh (Files owner (default))
+
+Check for default UID 0 and GID 0
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: be82d469-ed16-4b64-94d6-3e52eb58e2f5
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0081.sh (Files owner (aggr_cnv))
+
+skip
+
+## Test scripts/0082.sh (Files owner (set value))
+
+Check for UID 1000, GID 0
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 1000
+  File GID: 0
+  File access permissions: 640
+  FS UUID: e173e9c3-756f-4bcc-be53-bcb8b7fbac5c
+Resetting sequential zones
+Writing super block
+Check for UID 0, GID 1000
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 1000
+  File access permissions: 640
+  FS UUID: 18995049-97bd-49fc-a44f-ed90339dc86c
+Resetting sequential zones
+Writing super block
+Check for UID 1000, GID 2000
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 1000
+  File GID: 2000
+  File access permissions: 640
+  FS UUID: 087a1f6f-cf15-4d85-8d05-40b8d1daffe6
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0083.sh (Files owner (set value + aggr_cnv))
+
+skip
+
+## Test scripts/0100.sh (Files size (default))
+
+Check for 67108864 B file size
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 10fe958e-d119-4f7e-b9db-098693a5334c
+Resetting sequential zones
+Writing super block
+PASS
+
+## Test scripts/0101.sh (Files size (aggr_cnv))
+
+skip
+
+## Test scripts/0200.sh (Conventional file truncate)
+
+skip
+
+## Test scripts/0201.sh (Conventional file truncate (aggr_cnv))
+
+skip
+
+## Test scripts/0202.sh (Conventional file unlink)
+
+skip
+
+## Test scripts/0203.sh (Conventional file unlink (aggr_cnv))
+
+skip
+
+## Test scripts/0204.sh (Conventional file random write)
+
+skip
+
+## Test scripts/0205.sh (Conventional file random write (direct))
+
+skip
+
+## Test scripts/0206.sh (Conventional file random write (aggr_cnv))
+
+skip
+
+## Test scripts/0207.sh (Conventional file random write (aggr_cnv, direct))
+
+skip
+
+## Test scripts/0208.sh (Conventional file mmap read/write)
+
+skip
+
+## Test scripts/0209.sh (Conventional file mmap read/write (aggr_cnv))
+
+skip
+
+## Test scripts/0210.sh (Conventional file seq write)
+
+skip
+
+## Test scripts/0211.sh (Conventional file seq write (direct))
+
+skip
+
+## Test scripts/0212.sh (Conventional file seq write (aggr_cnv))
+
+skip
+
+## Test scripts/0213.sh (Conventional file seq write (aggr_cnv, direct))
+
+skip
+
+## Test scripts/0214.sh (Conventional file seq write (large IOs))
+
+skip
+
+## Test scripts/0215.sh (Conventional file seq write (aggr_cnv, large IOs))
+
+skip
+
+## Test scripts/0216.sh (Conventional file seq read)
+
+skip
+
+## Test scripts/0217.sh (Conventional file seq read (direct))
+
+skip
+
+## Test scripts/0218.sh (Conventional file seq read (aggr_cnv))
+
+skip
+
+## Test scripts/0219.sh (Conventional file seq read (aggr_cnv, direct))
+
+skip
+
+## Test scripts/0220.sh (Conventional file seq read (large IOs))
+
+skip
+
+## Test scripts/0221.sh (Conventional file seq read (aggr_cnv, large IOs))
+
+skip
+
+## Test scripts/0222.sh (Conventional file readahead)
+
+skip
+
+## Test scripts/0223.sh (Conventional file read beyond eof)
+
+skip
+
+## Test scripts/0300.sh (Sequential file truncate)
+
+Check sequential file truncate
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 82b82513-8829-447b-8dd2-011a92007b10
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00130744 s, 3.1 MB/s
+## file truncate to 0 (zone reset)
+## file truncate to after zone wp (e.g. 4096B)
+truncate: failed to truncate '/home/sam/zonefs-tools/tests/vda-mnt/seq/0' at 4096 bytes: Operation not permitted
+## file truncate to zone size (zone finish)
+PASS
+
+## Test scripts/0301.sh (Sequential file unlink)
+
+Check sequential file unlink
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 019f9d65-3e7c-43a0-9892-ba8daf7c3dd0
+Resetting sequential zones
+Writing super block
+rm: cannot remove '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Operation not permitted
+PASS
+
+## Test scripts/0302.sh (Sequential file buffered write IO)
+
+Check sequential file buffered write IO
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: e1a8b124-8712-4f43-997e-0d09fe533281
+Resetting sequential zones
+Writing super block
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Input/output error
+1+0 records in
+0+0 records out
+0 bytes copied, 0.000205902 s, 0.0 kB/s
+PASS
+
+## Test scripts/0303.sh (Sequential file overwrite)
+
+Check sequential file overwrite
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 69e8c82c-2025-4422-b5d9-0e2487a8ed27
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000750103 s, 5.5 MB/s
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Invalid argument
+1+0 records in
+0+0 records out
+0 bytes copied, 0.000110233 s, 0.0 kB/s
+PASS
+
+## Test scripts/0304.sh (Sequential file unaligned write (sync IO))
+
+Check sequential file unaligned write (sync IO)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 8dbcd4ab-65c8-4bae-9e67-52ff7dc11730
+Resetting sequential zones
+Writing super block
+dd: failed to truncate to 4096 bytes in output file '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Operation not permitted
+PASS
+
+## Test scripts/0305.sh (Sequential file unaligned write (async IO))
+
+/usr/bin/fio
+Check sequential file unaligned write (async IO)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 8e838c9b-3542-4b8b-a95a-80607fe5eade
+Resetting sequential zones
+Writing super block
+seq_wr: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seq_wr: you need to specify size=
+fio: pid=0, err=22/file:filesetup.c:1155, func=total_file_size, error=Invalid argument
+
+
+Run status group 0 (all jobs):
+PASS
+
+## Test scripts/0306.sh (Sequential file append (sync))
+
+Check sequential file append (sync)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 48b9cfd2-8613-4fa5-b8ad-03f59771dba4
+Resetting sequential zones
+Writing super block
+Check append writes with O_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000405285 s, 10.1 MB/s
+497 IOs done in 97 ms (97815 us)
+    5081 IOPS, 686.791 MB/s
+Check append writes with RWF_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00034951 s, 11.7 MB/s
+497 IOs done in 185 ms (185674 us)
+    2676 IOPS, 361.808 MB/s
+PASS
+
+## Test scripts/0307.sh (Sequential file append (async))
+
+Check sequential file append (async)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b7004ca8-ff4a-4a03-bc5b-d90619179f30
+Resetting sequential zones
+Writing super block
+Check append writes with O_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000270903 s, 15.1 MB/s
+00000: WRITE 135168 B at 0 failed 5 (Input/output error)
+ --> FAILED
+FAILED
+
+## Test scripts/0309.sh (Sequential file mmap read/write)
+
+/usr/bin/fio
+Check sequential file mmap write (should fail)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 01ec823a-38fe-49f8-883f-84f7fc3a2f5d
+Resetting sequential zones
+Writing super block
+cnv_mmapwr: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=mmap, iodepth=1
+fio-3.29
+Starting 1 process
+fio: pid=3322, err=22/file:engines/mmap.c:118, func=mmap, error=Invalid argument
+
+
+Run status group 0 (all jobs):
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+seqwrite: (g=0): rw=write, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=libaio, iodepth=64
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3326: Mon Sep  5 13:34:08 2022
+  read: IOPS=2509, BW=627MiB/s (658MB/s)(64.0MiB/102msec)
+    slat (nsec): min=7829, max=42239, avg=13473.66, stdev=3408.10
+    clat (usec): min=386, max=26287, avg=19219.35, stdev=7962.88
+     lat (usec): min=400, max=26297, avg=19233.14, stdev=7963.34
+    clat percentiles (usec):
+     |  1.00th=[  775],  5.00th=[ 2999], 10.00th=[ 5669], 20.00th=[10683],
+     | 30.00th=[15664], 40.00th=[20841], 50.00th=[25035], 60.00th=[25035],
+     | 70.00th=[25297], 80.00th=[25297], 90.00th=[25297], 95.00th=[25297],
+     | 99.00th=[25560], 99.50th=[25822], 99.90th=[26346], 99.95th=[26346],
+     | 99.99th=[26346]
+  write: IOPS=2151, BW=538MiB/s (564MB/s)(64.0MiB/119msec); 0 zone resets
+    slat (usec): min=417, max=765, avg=457.37, stdev=36.15
+    clat (usec): min=257, max=30204, avg=25093.44, stdev=7468.35
+     lat (usec): min=727, max=30971, avg=25551.33, stdev=7475.46
+    clat percentiles (usec):
+     |  1.00th=[ 1156],  5.00th=[ 5604], 10.00th=[11600], 20.00th=[22938],
+     | 30.00th=[28181], 40.00th=[28443], 50.00th=[28443], 60.00th=[28705],
+     | 70.00th=[28705], 80.00th=[28705], 90.00th=[28705], 95.00th=[29492],
+     | 99.00th=[30016], 99.50th=[30016], 99.90th=[30278], 99.95th=[30278],
+     | 99.99th=[30278]
+  lat (usec)   : 500=0.39%, 750=0.39%, 1000=0.20%
+  lat (msec)   : 2=1.17%, 4=2.73%, 10=8.98%, 20=13.87%, 50=72.27%
+  cpu          : usr=92.27%, sys=3.18%, ctx=573, majf=0, minf=21
+  IO depths    : 1=0.4%, 2=0.8%, 4=1.6%, 8=3.1%, 16=6.2%, 32=12.5%, >=64=75.4%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.5%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.5%, >=64=0.0%
+     issued rwts: total=256,256,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=627MiB/s (658MB/s), 627MiB/s-627MiB/s (658MB/s-658MB/s), io=64.0MiB (67.1MB), run=102-102msec
+  WRITE: bw=538MiB/s (564MB/s), 538MiB/s-538MiB/s (564MB/s-564MB/s), io=64.0MiB (67.1MB), run=119-119msec
+
+Disk stats (read/write):
+  vda: ios=106/256, merge=0/0, ticks=94/58, in_queue=151, util=54.84%
+Check sequential file mmap read
+seq_rndrd: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=mmap, iodepth=1
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3337: Mon Sep  5 13:34:10 2022
+  read: IOPS=158, BW=39.6MiB/s (41.5MB/s)(64.0MiB/1618msec)
+    clat (usec): min=4602, max=44028, avg=5943.24, stdev=3419.57
+     lat (usec): min=4602, max=44028, avg=5943.40, stdev=3419.67
+    clat percentiles (usec):
+     |  1.00th=[ 4686],  5.00th=[ 4752], 10.00th=[ 4948], 20.00th=[ 5145],
+     | 30.00th=[ 5342], 40.00th=[ 5473], 50.00th=[ 5604], 60.00th=[ 5735],
+     | 70.00th=[ 5866], 80.00th=[ 6063], 90.00th=[ 6325], 95.00th=[ 6456],
+     | 99.00th=[11600], 99.50th=[43254], 99.90th=[43779], 99.95th=[43779],
+     | 99.99th=[43779]
+   bw (  KiB/s): min=36864, max=41984, per=98.60%, avg=39936.00, stdev=2709.25, samples=3
+   iops        : min=  144, max=  164, avg=156.00, stdev=10.58, samples=3
+  lat (msec)   : 10=98.83%, 20=0.39%, 50=0.78%
+  cpu          : usr=7.17%, sys=8.35%, ctx=16432, majf=16384, minf=77
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=256,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=39.6MiB/s (41.5MB/s), 39.6MiB/s-39.6MiB/s (41.5MB/s-41.5MB/s), io=64.0MiB (67.1MB), run=1618-1618msec
+
+Disk stats (read/write):
+  vda: ios=13926/0, merge=0/0, ticks=1145/0, in_queue=1145, util=92.79%
+PASS
+
+## Test scripts/0310.sh (sequential file 4K synchronous write)
+
++ require_program fio
++ type -p fio
+/usr/bin/fio
++ echo 'Check sequential file 4K sync write'
+Check sequential file 4K sync write
++ zonefs_mkfs /dev/vda
++ IFS=' '
++ read -r -a args
++ mkzonefs -f /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 817ef2ec-4a56-4132-9652-ed49d94e1d20
+Resetting sequential zones
+Writing super block
++ zonefs_mount /dev/vda
++ IFS=' '
++ read -r -a args
++ mount -t zonefs /dev/vda /home/sam/zonefs-tools/tests/vda-mnt
+++ file_max_size /home/sam/zonefs-tools/tests/vda-mnt/seq/0
++++ stat -c %b /home/sam/zonefs-tools/tests/vda-mnt/seq/0
+++ nr_blocks=131072
++++ stat -c %B /home/sam/zonefs-tools/tests/vda-mnt/seq/0
+++ block_size=512
+++ echo 67108864
++ sz=67108864
++ truncate --no-create --size=0 /home/sam/zonefs-tools/tests/vda-mnt/seq/0
++ fio --name=seqwrite --filename=/home/sam/zonefs-tools/tests/vda-mnt/seq/0 --create_on_open=0 --allow_file_create=0 --file_append=1 --unlink=0 --rw=write --ioengine=psync --iodepth=64 --max-jobs=8 --bs=4096 --size=67108864 --verify=md5 --do_verify=1 --continue_on_error=none --direct=1
+seqwrite: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=64
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+verify: bad magic header ffff, wanted acca at file /home/sam/zonefs-tools/tests/vda-mnt/seq/0 offset 0, length 4096 (requested block: offset=0, length=4096)
+fio: pid=3363, err=84/file:io_u.c:2108, func=io_u_sync_complete, error=Invalid or incomplete multibyte or wide character
+
+seqwrite: (groupid=0, jobs=1): err=84 (file:io_u.c:2108, func=io_u_sync_complete, error=Invalid or incomplete multibyte or wide character): pid=3363: Mon Sep  5 13:34:13 2022
+  read: IOPS=1000, BW=4000KiB/s (4096kB/s)(4096B/1msec)
+    clat (nsec): min=111608, max=111608, avg=111608.00, stdev= 0.00
+     lat (nsec): min=111729, max=111729, avg=111729.00, stdev= 0.00
+    clat percentiles (usec):
+     |  1.00th=[  112],  5.00th=[  112], 10.00th=[  112], 20.00th=[  112],
+     | 30.00th=[  112], 40.00th=[  112], 50.00th=[  112], 60.00th=[  112],
+     | 70.00th=[  112], 80.00th=[  112], 90.00th=[  112], 95.00th=[  112],
+     | 99.00th=[  112], 99.50th=[  112], 99.90th=[  112], 99.95th=[  112],
+     | 99.99th=[  112]
+  write: IOPS=7052, BW=27.5MiB/s (28.9MB/s)(64.0MiB/2323msec); 0 zone resets
+    clat (usec): min=76, max=13198, avg=130.74, stdev=372.52
+     lat (usec): min=84, max=13214, avg=140.20, stdev=372.72
+    clat percentiles (usec):
+     |  1.00th=[   85],  5.00th=[   89], 10.00th=[   91], 20.00th=[   95],
+     | 30.00th=[   98], 40.00th=[  100], 50.00th=[  103], 60.00th=[  106],
+     | 70.00th=[  110], 80.00th=[  115], 90.00th=[  125], 95.00th=[  139],
+     | 99.00th=[  375], 99.50th=[  947], 99.90th=[ 6587], 99.95th=[ 8848],
+     | 99.99th=[13173]
+   bw (  KiB/s): min=26104, max=29134, per=99.27%, avg=28005.25, stdev=1318.15, samples=4
+   iops        : min= 6526, max= 7283, avg=7001.00, stdev=329.34, samples=4
+  lat (usec)   : 100=40.71%, 250=58.05%, 500=0.36%, 750=0.26%, 1000=0.15%
+  lat (msec)   : 2=0.09%, 4=0.14%, 10=0.22%, 20=0.02%
+  cpu          : usr=7.32%, sys=5.73%, ctx=31972, majf=0, minf=410
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=1,16384,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=4000KiB/s (4096kB/s), 4000KiB/s-4000KiB/s (4096kB/s-4096kB/s), io=4096B (4096B), run=1-1msec
+  WRITE: bw=27.5MiB/s (28.9MB/s), 27.5MiB/s-27.5MiB/s (28.9MB/s-28.9MB/s), io=64.0MiB (67.1MB), run=2323-2323msec
+
+Disk stats (read/write):
+  vda: ios=0/15009, merge=0/0, ticks=0/1754, in_queue=1753, util=92.74%
++ exit_failed 'fio write FAILED'
++ echo 'fio write FAILED'
+fio write FAILED
++ exit 1
+FAILED
+
+## Test scripts/0311.sh (Sequential file large synchronous write)
+
+/usr/bin/fio
+Check sequential file sync write bigger than max-append size
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 5342dc16-05be-4177-868e-5de1c93bad96
+Resetting sequential zones
+Writing super block
+seqwrite: (g=0): rw=write, bs=(R) 62.0MiB-62.0MiB, (W) 62.0MiB-62.0MiB, (T) 62.0MiB-62.0MiB, ioengine=psync, iodepth=64
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+fio: pid=3391, got signal=9
+
+
+Run status group 0 (all jobs):
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+PASS
+
+## Test scripts/0312.sh (Sequential file explicit-open zone resources)
+
+/usr/bin/fio
+Check explicit-open mounts
+skip
+
+## Test scripts/0320.sh (Sequential file random read (buffered))
+
+/usr/bin/fio
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: cd3b01b0-896b-4c93-8255-65c065f2a608
+Resetting sequential zones
+Writing super block
+Fill sequential file
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3444: Mon Sep  5 13:34:21 2022
+  read: IOPS=3710, BW=464MiB/s (486MB/s)(64.0MiB/138msec)
+    slat (nsec): min=6751, max=39938, avg=12066.17, stdev=4702.70
+    clat (usec): min=138, max=4747, avg=1911.12, stdev=853.17
+     lat (usec): min=159, max=4759, avg=1923.55, stdev=854.56
+    clat percentiles (usec):
+     |  1.00th=[  635],  5.00th=[ 1418], 10.00th=[ 1434], 20.00th=[ 1450],
+     | 30.00th=[ 1467], 40.00th=[ 1483], 50.00th=[ 1516], 60.00th=[ 1565],
+     | 70.00th=[ 1663], 80.00th=[ 2573], 90.00th=[ 3326], 95.00th=[ 3654],
+     | 99.00th=[ 4686], 99.50th=[ 4752], 99.90th=[ 4752], 99.95th=[ 4752],
+     | 99.99th=[ 4752]
+  write: IOPS=2585, BW=323MiB/s (339MB/s)(64.0MiB/198msec); 0 zone resets
+    slat (usec): min=199, max=4330, avg=283.21, stdev=227.74
+    clat (usec): min=1521, max=6707, avg=2781.60, stdev=1134.32
+     lat (usec): min=1791, max=6930, avg=3065.46, stdev=1129.84
+    clat percentiles (usec):
+     |  1.00th=[ 1582],  5.00th=[ 1631], 10.00th=[ 1696], 20.00th=[ 1778],
+     | 30.00th=[ 1991], 40.00th=[ 2212], 50.00th=[ 2343], 60.00th=[ 2868],
+     | 70.00th=[ 3326], 80.00th=[ 3589], 90.00th=[ 4080], 95.00th=[ 5407],
+     | 99.00th=[ 6652], 99.50th=[ 6718], 99.90th=[ 6718], 99.95th=[ 6718],
+     | 99.99th=[ 6718]
+  lat (usec)   : 250=0.20%, 500=0.20%, 750=0.29%, 1000=0.20%
+  lat (msec)   : 2=52.25%, 4=39.06%, 10=7.81%
+  cpu          : usr=62.69%, sys=4.18%, ctx=784, majf=0, minf=26
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=464MiB/s (486MB/s), 464MiB/s-464MiB/s (486MB/s-486MB/s), io=64.0MiB (67.1MB), run=138-138msec
+  WRITE: bw=323MiB/s (339MB/s), 323MiB/s-323MiB/s (339MB/s-339MB/s), io=64.0MiB (67.1MB), run=198-198msec
+
+Disk stats (read/write):
+  vda: ios=0/243, merge=0/141, ticks=0/183, in_queue=184, util=57.09%
+Check sequential file random read (sync)
+seq_rndrd: (g=0): rw=randread, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3458: Mon Sep  5 13:34:22 2022
+  read: IOPS=1802, BW=225MiB/s (236MB/s)(64.0MiB/284msec)
+    clat (usec): min=123, max=946, avg=313.53, stdev=163.68
+     lat (usec): min=123, max=947, avg=313.76, stdev=163.86
+    clat percentiles (usec):
+     |  1.00th=[  139],  5.00th=[  169], 10.00th=[  192], 20.00th=[  212],
+     | 30.00th=[  229], 40.00th=[  247], 50.00th=[  269], 60.00th=[  293],
+     | 70.00th=[  314], 80.00th=[  347], 90.00th=[  478], 95.00th=[  775],
+     | 99.00th=[  865], 99.50th=[  914], 99.90th=[  947], 99.95th=[  947],
+     | 99.99th=[  947]
+  lat (usec)   : 250=41.80%, 500=48.63%, 750=2.93%, 1000=6.64%
+  cpu          : usr=43.82%, sys=9.19%, ctx=548, majf=0, minf=44
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=225MiB/s (236MB/s), 225MiB/s-225MiB/s (236MB/s-236MB/s), io=64.0MiB (67.1MB), run=284-284msec
+
+Disk stats (read/write):
+  vda: ios=206/0, merge=0/0, ticks=64/0, in_queue=65, util=59.68%
+Check sequential file random read (async)
+seq_rndrd: (g=0): rw=randread, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3467: Mon Sep  5 13:34:22 2022
+  read: IOPS=1822, BW=228MiB/s (239MB/s)(64.0MiB/281msec)
+    slat (usec): min=120, max=884, avg=312.68, stdev=145.18
+    clat (usec): min=183, max=9504, avg=3796.67, stdev=1772.48
+     lat (usec): min=455, max=10225, avg=4110.12, stdev=1901.76
+    clat percentiles (usec):
+     |  1.00th=[ 2376],  5.00th=[ 2638], 10.00th=[ 2769], 20.00th=[ 2933],
+     | 30.00th=[ 3032], 40.00th=[ 3130], 50.00th=[ 3228], 60.00th=[ 3326],
+     | 70.00th=[ 3392], 80.00th=[ 3556], 90.00th=[ 6587], 95.00th=[ 8979],
+     | 99.00th=[ 9241], 99.50th=[ 9372], 99.90th=[ 9503], 99.95th=[ 9503],
+     | 99.99th=[ 9503]
+  lat (usec)   : 250=0.20%, 750=0.20%
+  lat (msec)   : 2=0.39%, 4=83.20%, 10=16.02%
+  cpu          : usr=44.64%, sys=7.86%, ctx=514, majf=0, minf=268
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=228MiB/s (239MB/s), 228MiB/s-228MiB/s (239MB/s-239MB/s), io=64.0MiB (67.1MB), run=281-281msec
+
+Disk stats (read/write):
+  vda: ios=214/0, merge=0/0, ticks=68/0, in_queue=68, util=59.68%
+PASS
+
+## Test scripts/0321.sh (Sequential file random read (direct))
+
+/usr/bin/fio
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b2f7116e-98e0-4d72-aa78-193168924f9c
+Resetting sequential zones
+Writing super block
+Fill sequential file
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3489: Mon Sep  5 13:34:23 2022
+  read: IOPS=4785, BW=598MiB/s (627MB/s)(64.0MiB/107msec)
+    slat (nsec): min=8169, max=38276, avg=10872.43, stdev=3420.47
+    clat (usec): min=160, max=1685, avg=1438.63, stdev=136.36
+     lat (usec): min=176, max=1699, avg=1449.84, stdev=136.38
+    clat percentiles (usec):
+     |  1.00th=[  652],  5.00th=[ 1385], 10.00th=[ 1401], 20.00th=[ 1401],
+     | 30.00th=[ 1418], 40.00th=[ 1418], 50.00th=[ 1434], 60.00th=[ 1450],
+     | 70.00th=[ 1467], 80.00th=[ 1516], 90.00th=[ 1549], 95.00th=[ 1565],
+     | 99.00th=[ 1631], 99.50th=[ 1663], 99.90th=[ 1680], 99.95th=[ 1680],
+     | 99.99th=[ 1680]
+  write: IOPS=3200, BW=400MiB/s (419MB/s)(64.0MiB/160msec); 0 zone resets
+    slat (usec): min=204, max=1484, avg=306.77, stdev=198.73
+    clat (usec): min=150, max=7767, avg=2114.57, stdev=1282.02
+     lat (usec): min=414, max=9255, avg=2422.18, stdev=1477.26
+    clat percentiles (usec):
+     |  1.00th=[ 1336],  5.00th=[ 1582], 10.00th=[ 1598], 20.00th=[ 1631],
+     | 30.00th=[ 1647], 40.00th=[ 1680], 50.00th=[ 1713], 60.00th=[ 1778],
+     | 70.00th=[ 1844], 80.00th=[ 1942], 90.00th=[ 2704], 95.00th=[ 5014],
+     | 99.00th=[ 7701], 99.50th=[ 7767], 99.90th=[ 7767], 99.95th=[ 7767],
+     | 99.99th=[ 7767]
+  lat (usec)   : 250=0.29%, 500=0.29%, 750=0.29%, 1000=0.39%
+  lat (msec)   : 2=90.53%, 4=4.79%, 10=3.42%
+  cpu          : usr=84.96%, sys=8.27%, ctx=1104, majf=0, minf=28
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=598MiB/s (627MB/s), 598MiB/s-598MiB/s (627MB/s-627MB/s), io=64.0MiB (67.1MB), run=107-107msec
+  WRITE: bw=400MiB/s (419MB/s), 400MiB/s-400MiB/s (419MB/s-419MB/s), io=64.0MiB (67.1MB), run=160-160msec
+
+Disk stats (read/write):
+  vda: ios=0/450, merge=0/0, ticks=0/87, in_queue=87, util=58.06%
+Check sequential file random read (sync)
+seq_rndrd: (g=0): rw=randread, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3500: Mon Sep  5 13:34:23 2022
+  read: IOPS=1917, BW=240MiB/s (251MB/s)(64.0MiB/267msec)
+    clat (usec): min=93, max=1054, avg=275.91, stdev=170.97
+     lat (usec): min=93, max=1055, avg=276.15, stdev=171.17
+    clat percentiles (usec):
+     |  1.00th=[  102],  5.00th=[  130], 10.00th=[  145], 20.00th=[  174],
+     | 30.00th=[  192], 40.00th=[  215], 50.00th=[  233], 60.00th=[  258],
+     | 70.00th=[  281], 80.00th=[  310], 90.00th=[  367], 95.00th=[  791],
+     | 99.00th=[  889], 99.50th=[  947], 99.90th=[ 1057], 99.95th=[ 1057],
+     | 99.99th=[ 1057]
+  lat (usec)   : 100=0.59%, 250=56.64%, 500=34.38%, 750=1.95%, 1000=6.25%
+  lat (msec)   : 2=0.20%
+  cpu          : usr=44.94%, sys=5.99%, ctx=512, majf=0, minf=44
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=240MiB/s (251MB/s), 240MiB/s-240MiB/s (251MB/s-251MB/s), io=64.0MiB (67.1MB), run=267-267msec
+
+Disk stats (read/write):
+  vda: ios=217/0, merge=0/0, ticks=69/0, in_queue=69, util=59.68%
+Check sequential file random read (async)
+seq_rndrd: (g=0): rw=randread, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3506: Mon Sep  5 13:34:24 2022
+  read: IOPS=3555, BW=444MiB/s (466MB/s)(64.0MiB/144msec)
+    slat (usec): min=7, max=221, avg=15.36, stdev=21.60
+    clat (usec): min=188, max=6881, avg=1934.57, stdev=1301.29
+     lat (usec): min=197, max=6988, avg=1950.31, stdev=1314.11
+    clat percentiles (usec):
+     |  1.00th=[ 1004],  5.00th=[ 1385], 10.00th=[ 1401], 20.00th=[ 1401],
+     | 30.00th=[ 1418], 40.00th=[ 1418], 50.00th=[ 1450], 60.00th=[ 1483],
+     | 70.00th=[ 1549], 80.00th=[ 1778], 90.00th=[ 3163], 95.00th=[ 6521],
+     | 99.00th=[ 6783], 99.50th=[ 6849], 99.90th=[ 6849], 99.95th=[ 6849],
+     | 99.99th=[ 6849]
+  lat (usec)   : 250=0.20%, 500=0.20%, 750=0.39%, 1000=0.39%
+  lat (msec)   : 2=82.42%, 4=8.79%, 10=7.62%
+  cpu          : usr=90.91%, sys=4.90%, ctx=43, majf=0, minf=267
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=444MiB/s (466MB/s), 444MiB/s-444MiB/s (466MB/s-466MB/s), io=64.0MiB (67.1MB), run=144-144msec
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+PASS
+
+## Test scripts/0322.sh (Sequential file seq read (buffered))
+
+/usr/bin/fio
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 2aabdf9b-f7fa-46f5-ba9d-19c3493ce6a0
+Resetting sequential zones
+Writing super block
+Fill sequential file
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3526: Mon Sep  5 13:34:24 2022
+  read: IOPS=4876, BW=610MiB/s (639MB/s)(64.0MiB/105msec)
+    slat (nsec): min=5355, max=25957, avg=9550.74, stdev=1918.81
+    clat (usec): min=117, max=1541, avg=1410.35, stdev=130.55
+     lat (usec): min=143, max=1554, avg=1420.27, stdev=130.46
+    clat percentiles (usec):
+     |  1.00th=[  594],  5.00th=[ 1385], 10.00th=[ 1401], 20.00th=[ 1401],
+     | 30.00th=[ 1401], 40.00th=[ 1418], 50.00th=[ 1418], 60.00th=[ 1434],
+     | 70.00th=[ 1434], 80.00th=[ 1450], 90.00th=[ 1467], 95.00th=[ 1483],
+     | 99.00th=[ 1516], 99.50th=[ 1516], 99.90th=[ 1549], 99.95th=[ 1549],
+     | 99.99th=[ 1549]
+  write: IOPS=3324, BW=416MiB/s (436MB/s)(64.0MiB/154msec); 0 zone resets
+    slat (usec): min=195, max=2506, avg=290.67, stdev=201.24
+    clat (usec): min=107, max=8825, avg=2024.69, stdev=1094.27
+     lat (usec): min=325, max=10491, avg=2316.25, stdev=1260.89
+    clat percentiles (usec):
+     |  1.00th=[ 1254],  5.00th=[ 1598], 10.00th=[ 1614], 20.00th=[ 1647],
+     | 30.00th=[ 1663], 40.00th=[ 1696], 50.00th=[ 1729], 60.00th=[ 1762],
+     | 70.00th=[ 1827], 80.00th=[ 1909], 90.00th=[ 2442], 95.00th=[ 3884],
+     | 99.00th=[ 7570], 99.50th=[ 8717], 99.90th=[ 8848], 99.95th=[ 8848],
+     | 99.99th=[ 8848]
+  lat (usec)   : 250=0.29%, 500=0.29%, 750=0.39%, 1000=0.39%
+  lat (msec)   : 2=91.50%, 4=4.88%, 10=2.25%
+  cpu          : usr=84.82%, sys=7.00%, ctx=1099, majf=0, minf=28
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=610MiB/s (639MB/s), 610MiB/s-610MiB/s (639MB/s-639MB/s), io=64.0MiB (67.1MB), run=105-105msec
+  WRITE: bw=416MiB/s (436MB/s), 416MiB/s-416MiB/s (436MB/s-436MB/s), io=64.0MiB (67.1MB), run=154-154msec
+
+Disk stats (read/write):
+  vda: ios=0/465, merge=0/6, ticks=0/90, in_queue=91, util=57.26%
+Check sequential file sequential read (sync)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3537: Mon Sep  5 13:34:25 2022
+  read: IOPS=3346, BW=418MiB/s (439MB/s)(64.0MiB/153msec)
+    clat (usec): min=9, max=1666, avg=41.92, stdev=80.51
+     lat (usec): min=9, max=1667, avg=42.05, stdev=80.57
+    clat percentiles (usec):
+     |  1.00th=[   10],  5.00th=[   11], 10.00th=[   12], 20.00th=[   12],
+     | 30.00th=[   13], 40.00th=[   19], 50.00th=[   44], 60.00th=[   45],
+     | 70.00th=[   46], 80.00th=[   48], 90.00th=[   63], 95.00th=[  100],
+     | 99.00th=[  206], 99.50th=[  210], 99.90th=[ 1663], 99.95th=[ 1663],
+     | 99.99th=[ 1663]
+  lat (usec)   : 10=1.17%, 20=41.21%, 50=39.84%, 100=12.70%, 250=4.88%
+  lat (msec)   : 2=0.20%
+  cpu          : usr=84.21%, sys=11.84%, ctx=9, majf=0, minf=44
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=418MiB/s (439MB/s), 418MiB/s-418MiB/s (439MB/s-439MB/s), io=64.0MiB (67.1MB), run=153-153msec
+
+Disk stats (read/write):
+  vda: ios=246/0, merge=0/0, ticks=67/0, in_queue=66, util=57.66%
+Check sequential file sequential read (async)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3544: Mon Sep  5 13:34:25 2022
+  read: IOPS=4129, BW=516MiB/s (541MB/s)(64.0MiB/124msec)
+    slat (usec): min=10, max=2832, avg=38.60, stdev=127.68
+    clat (usec): min=186, max=8595, avg=1653.85, stdev=743.55
+     lat (usec): min=199, max=8614, avg=1692.78, stdev=753.64
+    clat percentiles (usec):
+     |  1.00th=[  971],  5.00th=[ 1500], 10.00th=[ 1500], 20.00th=[ 1516],
+     | 30.00th=[ 1532], 40.00th=[ 1549], 50.00th=[ 1549], 60.00th=[ 1565],
+     | 70.00th=[ 1582], 80.00th=[ 1598], 90.00th=[ 1631], 95.00th=[ 1680],
+     | 99.00th=[ 5800], 99.50th=[ 8586], 99.90th=[ 8586], 99.95th=[ 8586],
+     | 99.99th=[ 8586]
+  lat (usec)   : 250=0.20%, 500=0.20%, 750=0.20%, 1000=0.78%
+  lat (msec)   : 2=93.95%, 4=2.73%, 10=1.95%
+  cpu          : usr=77.24%, sys=12.20%, ctx=18, majf=0, minf=269
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=516MiB/s (541MB/s), 516MiB/s-516MiB/s (541MB/s-541MB/s), io=64.0MiB (67.1MB), run=124-124msec
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+PASS
+
+## Test scripts/0323.sh (Sequential file seq read (direct))
+
+/usr/bin/fio
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b69b1114-fe96-4245-bb34-7c34f4d913c3
+Resetting sequential zones
+Writing super block
+Fill sequential file
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3566: Mon Sep  5 13:34:26 2022
+  read: IOPS=4452, BW=557MiB/s (584MB/s)(64.0MiB/115msec)
+    slat (nsec): min=5244, max=22362, avg=9706.53, stdev=2088.46
+    clat (usec): min=186, max=5023, avg=1555.42, stdev=607.33
+     lat (usec): min=202, max=5033, avg=1565.47, stdev=607.33
+    clat percentiles (usec):
+     |  1.00th=[  611],  5.00th=[ 1385], 10.00th=[ 1401], 20.00th=[ 1401],
+     | 30.00th=[ 1401], 40.00th=[ 1418], 50.00th=[ 1434], 60.00th=[ 1434],
+     | 70.00th=[ 1467], 80.00th=[ 1483], 90.00th=[ 1500], 95.00th=[ 2999],
+     | 99.00th=[ 4948], 99.50th=[ 4948], 99.90th=[ 5014], 99.95th=[ 5014],
+     | 99.99th=[ 5014]
+  write: IOPS=3200, BW=400MiB/s (419MB/s)(64.0MiB/160msec); 0 zone resets
+    slat (usec): min=204, max=1597, avg=305.98, stdev=202.45
+    clat (usec): min=164, max=8306, avg=2108.62, stdev=1297.82
+     lat (usec): min=429, max=9807, avg=2415.31, stdev=1496.65
+    clat percentiles (usec):
+     |  1.00th=[ 1467],  5.00th=[ 1598], 10.00th=[ 1647], 20.00th=[ 1663],
+     | 30.00th=[ 1680], 40.00th=[ 1696], 50.00th=[ 1729], 60.00th=[ 1745],
+     | 70.00th=[ 1778], 80.00th=[ 1926], 90.00th=[ 2573], 95.00th=[ 5080],
+     | 99.00th=[ 8225], 99.50th=[ 8291], 99.90th=[ 8291], 99.95th=[ 8291],
+     | 99.99th=[ 8291]
+  lat (usec)   : 250=0.29%, 500=0.29%, 750=0.29%, 1000=0.39%
+  lat (msec)   : 2=87.01%, 4=7.42%, 10=4.30%
+  cpu          : usr=83.15%, sys=6.96%, ctx=1059, majf=0, minf=26
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=557MiB/s (584MB/s), 557MiB/s-557MiB/s (584MB/s-584MB/s), io=64.0MiB (67.1MB), run=115-115msec
+  WRITE: bw=400MiB/s (419MB/s), 400MiB/s-400MiB/s (419MB/s-419MB/s), io=64.0MiB (67.1MB), run=160-160msec
+
+Disk stats (read/write):
+  vda: ios=0/451, merge=0/0, ticks=0/91, in_queue=90, util=58.06%
+Check sequential file sequential read (sync)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3577: Mon Sep  5 13:34:26 2022
+  read: IOPS=2160, BW=270MiB/s (283MB/s)(64.0MiB/237msec)
+    clat (usec): min=86, max=1134, avg=230.47, stdev=128.47
+     lat (usec): min=86, max=1135, avg=230.66, stdev=128.62
+    clat percentiles (usec):
+     |  1.00th=[  104],  5.00th=[  133], 10.00th=[  153], 20.00th=[  165],
+     | 30.00th=[  174], 40.00th=[  192], 50.00th=[  206], 60.00th=[  212],
+     | 70.00th=[  225], 80.00th=[  249], 90.00th=[  293], 95.00th=[  408],
+     | 99.00th=[  791], 99.50th=[  865], 99.90th=[ 1139], 99.95th=[ 1139],
+     | 99.99th=[ 1139]
+  lat (usec)   : 100=0.59%, 250=79.69%, 500=15.23%, 750=2.34%, 1000=1.76%
+  lat (msec)   : 2=0.39%
+  cpu          : usr=47.88%, sys=4.66%, ctx=530, majf=0, minf=44
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=270MiB/s (283MB/s), 270MiB/s-270MiB/s (283MB/s-283MB/s), io=64.0MiB (67.1MB), run=237-237msec
+
+Disk stats (read/write):
+  vda: ios=287/0, merge=0/0, ticks=64/0, in_queue=64, util=58.87%
+Check sequential file random read (async)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=3583: Mon Sep  5 13:34:26 2022
+  read: IOPS=3180, BW=398MiB/s (417MB/s)(64.0MiB/161msec)
+    slat (usec): min=7, max=199, avg=14.25, stdev=16.93
+    clat (usec): min=206, max=15525, avg=2201.91, stdev=1935.74
+     lat (usec): min=216, max=15668, avg=2216.56, stdev=1949.12
+    clat percentiles (usec):
+     |  1.00th=[ 1237],  5.00th=[ 1401], 10.00th=[ 1401], 20.00th=[ 1418],
+     | 30.00th=[ 1418], 40.00th=[ 1434], 50.00th=[ 1450], 60.00th=[ 1483],
+     | 70.00th=[ 1516], 80.00th=[ 2212], 90.00th=[ 4293], 95.00th=[ 6063],
+     | 99.00th=[11600], 99.50th=[13829], 99.90th=[15533], 99.95th=[15533],
+     | 99.99th=[15533]
+  lat (usec)   : 250=0.20%, 500=0.20%, 750=0.20%, 1000=0.20%
+  lat (msec)   : 2=78.71%, 4=8.20%, 10=10.74%, 20=1.56%
+  cpu          : usr=73.12%, sys=3.12%, ctx=27, majf=0, minf=268
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=398MiB/s (417MB/s), 398MiB/s-398MiB/s (417MB/s-417MB/s), io=64.0MiB (67.1MB), run=161-161msec
+
+Disk stats (read/write):
+  vda: ios=436/0, merge=0/0, ticks=207/0, in_queue=206, util=51.61%
+PASS
+
+## Test scripts/0324.sh (Sequential file readahead)
+
+Check sequential file readahead
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: d837c8a4-2b16-46e1-a964-1c943e78080f
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00190545 s, 2.1 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000378359 s, 10.8 MB/s
+PASS
+
+## Test scripts/0325.sh (Sequential file read beyond eof)
+
+Check sequential file read beyond eof
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 7d75eb5c-0c0a-4411-bce8-5b384d8ebad2
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000794272 s, 5.2 MB/s
+0+1 records in
+0+1 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000501151 s, 8.2 MB/s
+Check sequential file read beyond max size
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.29
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Input/output error: write offset=4096, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=266240, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Input/output error: write offset=135168, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=397312, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=528384, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=659456, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=790528, buflen=131072
+fio: io_u error on file /home/sam/zonefs-tools/tests/vda-mnt/seq/0: Read-only file system: write offset=921600, buflen=131072
+fio: pid=3626, err=5/file:io_u.c:1845, func=io_u error, error=Input/output error
+
+seqwrite: (groupid=0, jobs=1): err= 5 (file:io_u.c:1845, func=io_u error, error=Input/output error): pid=3626: Mon Sep  5 13:34:27 2022
+  cpu          : usr=50.00%, sys=0.00%, ctx=9, majf=0, minf=19
+  IO depths    : 1=12.5%, 2=25.0%, 4=50.0%, 8=12.5%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=66.7%, 8=33.3%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,8,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+
+Disk stats (read/write):
+  vda: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+fio write FAILED
+FAILED
+
+## Test scripts/0400.sh (Swap file on conventional file)
+
+skip
+
+## Test scripts/0401.sh (Swap file on sequential file)
+
+Check swap file on sequential file
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 971c3f0f-c05e-4c51-8480-ae46eebff3fe
+Resetting sequential zones
+Writing super block
+512 IOs done in 42 ms (42242 us)
+    12120 IOPS, 1588.676 MB/s
+mkswap: unable to erase bootbits sectors
+Setting up swapspace version 1, size = 64 MiB (67104768 bytes)
+no label, UUID=3808112c-4187-41d2-a2f7-85538e1c32a6
+512+0 records in
+512+0 records out
+67108864 bytes (67 MB, 64 MiB) copied, 0.0833891 s, 805 MB/s
+swapon: /home/sam/zonefs-tools/tests/vda-mnt/seq/0: swapon failed: Invalid argument
+PASS
+
+## Test scripts/0510.sh (Sysfs attr after format)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 33c57afa-2b1e-4598-bb7b-9a2204a000cf
+Resetting sequential zones
+Writing super block
+Check max write open seq files
+Check max active seq files
+Check write open seq files count
+Check active seq files count
+PASS
+
+## Test scripts/0511.sh (Sysfs seq files active after mount (open zones))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ed2b5c19-d8c8-4b3f-a307-b35aff07758f
+Resetting sequential zones
+Writing super block
+Check active seq files count
+PASS
+
+## Test scripts/0512.sh (Sysfs seq files active after mount (active zones))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 33651047-c6d9-4462-94f7-05bb27367414
+Resetting sequential zones
+Writing super block
+Writing 4K in 4 zones
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000311083 s, 13.2 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000365986 s, 11.2 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000373722 s, 11.0 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000335286 s, 12.2 MB/s
+Check active seq files count
+PASS
+
+## Test scripts/0513.sh (Sysfs seq files write-open (default))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: dbbb4bc9-1c9f-44a9-83cd-c661d7643c08
+Resetting sequential zones
+Writing super block
+Check read open
+Opening 1 files for reading
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for reading
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for reading
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for reading
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for reading
+Opened 5 files from file 0
+Closed 5 files from file 0
+Check write open
+Opening 1 files for writing
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for writing
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for writing
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for writing
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for writing
+Opened 5 files from file 0
+Closed 5 files from file 0
+PASS
+
+## Test scripts/0514.sh (Sysfs seq files write-open (explicit-open))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 0ca17cc8-20ec-4fff-a459-a22c9e6e87d0
+Resetting sequential zones
+Writing super block
+Check read open
+Opening 1 files for reading
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for reading
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for reading
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for reading
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for reading
+Opened 5 files from file 0
+Closed 5 files from file 0
+Check write open
+Opening 1 files for writing
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for writing
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for writing
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for writing
+Opened 4 files from file 0
+Closed 4 files from file 0
+PASS
+
+## Test scripts/0515.sh (Sysfs seq files active after write (default))
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 4304e47a-007a-4233-97ea-31ce46e21e96
+Resetting sequential zones
+Writing super block
+Writing seq file 1
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000275927 s, 14.8 MB/s
+Writing seq file 2
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00037082 s, 11.0 MB/s
+Writing seq file 3
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000373128 s, 11.0 MB/s
+Writing seq file 4
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000444013 s, 9.2 MB/s
+nr_active_seq_files is 1 (should be 4)
+FAILED
+
+## Test scripts/0516.sh (Sysfs conv files write-open)
+
+skip
+
+## Test scripts/0517.sh (Sysfs conv files active after write)
+
+skip
+
