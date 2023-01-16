@@ -1,0 +1,18 @@
+## Test 0022: mount (check mount directory sub-directories)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: f0a0b9da-7ad0-49ac-9314-acf344eeb449
+Resetting sequential zones
+Writing super block
+PASS
+

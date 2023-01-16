@@ -1,0 +1,23 @@
+## Test 0110: File names and inode numbers (default)
+
+Check file names and their inode numbers
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: cc324a6b-5fb5-478d-a0c3-06aef6a9dcaa
+Resetting sequential zones
+Writing super block
+Checking root inode /home/sam/zonefs-tools/tests/vda-mnt
+Checking sequential files
+Checking seq directory inode number
+Checking seq directory files inode number
+PASS
+

@@ -1,0 +1,6 @@
+## Test 0623: Sequential file offline zone (errors=zone-ro, io-err)
+
+Check sequential file on an offline zone at io-error time
+ --> skipped: null_blk does not support zone_offline config
+skip
+

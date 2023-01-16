@@ -1,0 +1,23 @@
+## Test 0223: Conventional file read beyond eof
+
+/usr/bin/dd
+Check conventional file read beyond eof
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 94724529-a633-457e-92b0-2e8c0216b53d
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+8192 bytes (8.2 kB, 8.0 KiB) copied, 0.00052798 s, 15.5 MB/s
+PASS
+

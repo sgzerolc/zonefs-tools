@@ -1,0 +1,19 @@
+## Test 0511: Sysfs seq files active after mount (open zones)
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ccd797c5-4119-4001-8812-c5e136d94c5b
+Resetting sequential zones
+Writing super block
+Check active seq files count
+PASS
+

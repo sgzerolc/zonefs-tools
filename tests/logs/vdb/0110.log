@@ -1,0 +1,26 @@
+## Test 0110: File names and inode numbers (default)
+
+Check file names and their inode numbers
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 77ee310b-1800-47d4-99df-ca036d038e8e
+Resetting sequential zones
+Writing super block
+Checking root inode /home/sam/zonefs-tools/tests/vdb-mnt
+Checking conventional files
+Checking cnv directory inode number
+Checking cnv directory files inode number
+Checking sequential files
+Checking seq directory inode number
+Checking seq directory files inode number
+PASS
+

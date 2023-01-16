@@ -1,0 +1,19 @@
+## Test 0101: Files size (aggr_cnv)
+
+Check for 335544320 B file size
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ee7f2b24-3736-42cd-8edc-0d8ab8df185c
+Resetting sequential zones
+Writing super block
+PASS
+

@@ -1,0 +1,6 @@
+## Test 0626: Sequential file offline zone (errors=repair, mount)
+
+Check sequential file on an offline zone at mount time
+ --> skipped: null_blk does not support zone_offline config
+skip
+

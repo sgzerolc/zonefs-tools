@@ -1,0 +1,20 @@
+## Test 0203: Conventional file unlink (aggr_cnv)
+
+Check conventional file unlink, aggr_cnv
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 23eeeb38-dcbd-4f85-817a-e5abf4ba1c87
+Resetting sequential zones
+Writing super block
+rm: cannot remove '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/0': Operation not permitted
+PASS
+

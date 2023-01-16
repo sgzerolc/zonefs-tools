@@ -1,0 +1,38 @@
+## Test 0517: Sysfs seq files active after truncate to max (default)
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 6b199bb5-6e02-49a6-8e40-296141422092
+Resetting sequential zones
+Writing super block
+Writing seq file 0
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00241106 s, 435 MB/s
+Writing seq file 1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.002641 s, 397 MB/s
+Writing seq file 2
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00237364 s, 442 MB/s
+Writing seq file 3
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.002129 s, 493 MB/s
+Filling seq file 0
+Filling seq file 1
+Filling seq file 2
+Filling seq file 3
+PASS
+

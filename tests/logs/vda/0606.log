@@ -1,0 +1,32 @@
+## Test 0606: Sequential file write IO error (errors=repair, sync)
+
+Check handling of sequential file write IO error
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: c6fffd58-5cf9-4cbf-b9be-3f85675b217d
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000351625 s, 11.6 MB/s
+Write seq file 0 zone directly
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000401767 s, 10.2 MB/s
+Try writing seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000235195 s, 17.4 MB/s
+ --> write 4096 B to /home/sam/zonefs-tools/tests/vda-mnt/seq/0 SUCCESS (should FAIL)
+FAILED
+

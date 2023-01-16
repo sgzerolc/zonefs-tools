@@ -1,0 +1,5 @@
+## Test 0214: Conventional file seq write (large IOs)
+
+ --> skipped: no conventional files
+skip
+

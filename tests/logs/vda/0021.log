@@ -1,0 +1,10 @@
+## Test 0021: mount (invalid device)
+
+Check mount with invalid device
+mount: /home/sam/zonefs-tools/tests/vda-mnt: /dev/console is not a block device.
+       dmesg(1) may have more information after failed mount system call.
+Check mount with non-zoned block device
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/nullb0, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+PASS
+

@@ -1,0 +1,87 @@
+## Test 0310: sequential file 4K synchronous write
+
++ require_program fio
++ type -p fio
+/usr/local/bin/fio
++ echo 'Check sequential file 4K sync write'
+Check sequential file 4K sync write
++ zonefs_mkfs /dev/vdb
++ IFS=' '
++ read -r -a args
++ mkzonefs -f /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b159ab50-4a12-4cbc-8e27-b0a99e2479b6
+Resetting sequential zones
+Writing super block
++ zonefs_mount /dev/vdb
++ IFS=' '
++ read -r -a args
++ mount -t zonefs /dev/vdb /home/sam/zonefs-tools/tests/vdb-mnt
+++ file_max_size /home/sam/zonefs-tools/tests/vdb-mnt/seq/0
++++ stat -c %b /home/sam/zonefs-tools/tests/vdb-mnt/seq/0
+++ nr_blocks=131072
++++ stat -c %B /home/sam/zonefs-tools/tests/vdb-mnt/seq/0
+++ block_size=512
+++ echo 67108864
++ sz=67108864
++ truncate --no-create --size=0 /home/sam/zonefs-tools/tests/vdb-mnt/seq/0
++ fio --name=seqwrite --filename=/home/sam/zonefs-tools/tests/vdb-mnt/seq/0 --create_on_open=0 --allow_file_create=0 --file_append=1 --unlink=0 --rw=write --ioengine=psync --iodepth=64 --max-jobs=8 --bs=4096 --size=67108864 --verify=md5 --do_verify=1 --continue_on_error=none --direct=1
+seqwrite: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=64
+fio-3.32
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+note: both iodepth >= 1 and synchronous I/O engine are selected, queue depth will be capped at 1
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=4097: Mon Jan 16 20:43:52 2023
+  read: IOPS=11.8k, BW=46.0MiB/s (48.2MB/s)(64.0MiB/1391msec)
+    clat (usec): min=42, max=2607, avg=77.75, stdev=37.29
+     lat (usec): min=42, max=2607, avg=77.81, stdev=37.30
+    clat percentiles (usec):
+     |  1.00th=[   48],  5.00th=[   53], 10.00th=[   55], 20.00th=[   58],
+     | 30.00th=[   61], 40.00th=[   64], 50.00th=[   67], 60.00th=[   72],
+     | 70.00th=[   90], 80.00th=[  100], 90.00th=[  114], 95.00th=[  128],
+     | 99.00th=[  163], 99.50th=[  182], 99.90th=[  204], 99.95th=[  219],
+     | 99.99th=[ 2114]
+  write: IOPS=5814, BW=22.7MiB/s (23.8MB/s)(64.0MiB/2818msec); 0 zone resets
+    clat (usec): min=85, max=10610, avg=163.19, stdev=458.88
+     lat (usec): min=92, max=10618, avg=170.94, stdev=459.05
+    clat percentiles (usec):
+     |  1.00th=[   95],  5.00th=[  101], 10.00th=[  105], 20.00th=[  111],
+     | 30.00th=[  116], 40.00th=[  121], 50.00th=[  125], 60.00th=[  130],
+     | 70.00th=[  137], 80.00th=[  149], 90.00th=[  169], 95.00th=[  184],
+     | 99.00th=[  424], 99.50th=[ 1012], 99.90th=[ 8094], 99.95th=[ 9372],
+     | 99.99th=[10421]
+   bw (  KiB/s): min=15152, max=24328, per=93.93%, avg=21845.33, stdev=3584.10, samples=6
+   iops        : min= 3788, max= 6082, avg=5461.33, stdev=896.03, samples=6
+  lat (usec)   : 50=1.11%, 100=40.76%, 250=57.43%, 500=0.23%, 750=0.10%
+  lat (usec)   : 1000=0.12%
+  lat (msec)   : 2=0.02%, 4=0.05%, 10=0.18%, 20=0.01%
+  cpu          : usr=8.10%, sys=6.80%, ctx=49173, majf=0, minf=414
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=16384,16384,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=46.0MiB/s (48.2MB/s), 46.0MiB/s-46.0MiB/s (48.2MB/s-48.2MB/s), io=64.0MiB (67.1MB), run=1391-1391msec
+  WRITE: bw=22.7MiB/s (23.8MB/s), 22.7MiB/s-22.7MiB/s (23.8MB/s-23.8MB/s), io=64.0MiB (67.1MB), run=2818-2818msec
+
+Disk stats (read/write):
+  vdb: ios=15436/16384, merge=0/0, ticks=1066/2476, in_queue=3541, util=97.62%
++ zonefs_umount
++ udevadm settle
++ umount /home/sam/zonefs-tools/tests/vdb-mnt
++ set +x
+PASS
+

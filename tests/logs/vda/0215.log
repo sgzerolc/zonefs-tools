@@ -1,0 +1,5 @@
+## Test 0215: Conventional file seq write (aggr_cnv, large IOs)
+
+ --> skipped: no conventional files
+skip
+

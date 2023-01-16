@@ -1,0 +1,120 @@
+## Test 0323: Sequential file seq read (direct)
+
+/usr/local/bin/fio
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a80e9d01-733e-4273-b440-4f6bb5afebfb
+Resetting sequential zones
+Writing super block
+Fill sequential file
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.32
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=4287: Mon Jan 16 20:43:58 2023
+  read: IOPS=4923, BW=615MiB/s (645MB/s)(64.0MiB/104msec)
+    slat (nsec): min=5448, max=47522, avg=9645.88, stdev=2947.31
+    clat (usec): min=153, max=1567, avg=1399.94, stdev=130.60
+     lat (usec): min=167, max=1578, avg=1409.58, stdev=130.15
+    clat percentiles (usec):
+     |  1.00th=[  586],  5.00th=[ 1385], 10.00th=[ 1385], 20.00th=[ 1385],
+     | 30.00th=[ 1401], 40.00th=[ 1401], 50.00th=[ 1401], 60.00th=[ 1418],
+     | 70.00th=[ 1434], 80.00th=[ 1450], 90.00th=[ 1467], 95.00th=[ 1483],
+     | 99.00th=[ 1516], 99.50th=[ 1532], 99.90th=[ 1565], 99.95th=[ 1565],
+     | 99.99th=[ 1565]
+  write: IOPS=3368, BW=421MiB/s (442MB/s)(64.0MiB/152msec); 0 zone resets
+    slat (usec): min=189, max=1997, avg=287.68, stdev=221.19
+    clat (usec): min=393, max=8810, avg=2003.18, stdev=1312.21
+     lat (usec): min=586, max=10533, avg=2290.86, stdev=1512.00
+    clat percentiles (usec):
+     |  1.00th=[ 1467],  5.00th=[ 1500], 10.00th=[ 1516], 20.00th=[ 1516],
+     | 30.00th=[ 1532], 40.00th=[ 1549], 50.00th=[ 1582], 60.00th=[ 1598],
+     | 70.00th=[ 1647], 80.00th=[ 1827], 90.00th=[ 3064], 95.00th=[ 4146],
+     | 99.00th=[ 8455], 99.50th=[ 8717], 99.90th=[ 8848], 99.95th=[ 8848],
+     | 99.99th=[ 8848]
+  lat (usec)   : 250=0.20%, 500=0.29%, 750=0.39%, 1000=0.39%
+  lat (msec)   : 2=90.04%, 4=6.15%, 10=2.54%
+  cpu          : usr=85.88%, sys=6.27%, ctx=1022, majf=0, minf=29
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=615MiB/s (645MB/s), 615MiB/s-615MiB/s (645MB/s-645MB/s), io=64.0MiB (67.1MB), run=104-104msec
+  WRITE: bw=421MiB/s (442MB/s), 421MiB/s-421MiB/s (442MB/s-442MB/s), io=64.0MiB (67.1MB), run=152-152msec
+
+Disk stats (read/write):
+  vdb: ios=0/477, merge=0/8, ticks=0/97, in_queue=97, util=57.83%
+Check sequential file sequential read (sync)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.32
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=4299: Mon Jan 16 20:43:58 2023
+  read: IOPS=1747, BW=218MiB/s (229MB/s)(64.0MiB/293msec)
+    clat (usec): min=97, max=3109, avg=314.71, stdev=219.64
+     lat (usec): min=98, max=3109, avg=314.97, stdev=219.75
+    clat percentiles (usec):
+     |  1.00th=[  122],  5.00th=[  165], 10.00th=[  192], 20.00th=[  223],
+     | 30.00th=[  245], 40.00th=[  262], 50.00th=[  281], 60.00th=[  297],
+     | 70.00th=[  318], 80.00th=[  343], 90.00th=[  388], 95.00th=[  644],
+     | 99.00th=[  906], 99.50th=[ 1696], 99.90th=[ 3097], 99.95th=[ 3097],
+     | 99.99th=[ 3097]
+  lat (usec)   : 100=0.20%, 250=32.62%, 500=60.94%, 750=2.54%, 1000=2.93%
+  lat (msec)   : 2=0.39%, 4=0.39%
+  cpu          : usr=44.52%, sys=3.77%, ctx=547, majf=0, minf=45
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=218MiB/s (229MB/s), 218MiB/s-218MiB/s (229MB/s-229MB/s), io=64.0MiB (67.1MB), run=293-293msec
+
+Disk stats (read/write):
+  vdb: ios=222/0, merge=0/0, ticks=73/0, in_queue=72, util=59.44%
+Check sequential file random read (async)
+seq_rndrd: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.32
+Starting 1 process
+
+seq_rndrd: (groupid=0, jobs=1): err= 0: pid=4308: Mon Jan 16 20:43:59 2023
+  read: IOPS=3580, BW=448MiB/s (469MB/s)(64.0MiB/143msec)
+    slat (usec): min=7, max=227, avg=16.26, stdev=22.80
+    clat (usec): min=188, max=7948, avg=1924.49, stdev=1402.58
+     lat (usec): min=206, max=8134, avg=1940.76, stdev=1417.73
+    clat percentiles (usec):
+     |  1.00th=[ 1156],  5.00th=[ 1385], 10.00th=[ 1385], 20.00th=[ 1401],
+     | 30.00th=[ 1401], 40.00th=[ 1418], 50.00th=[ 1434], 60.00th=[ 1467],
+     | 70.00th=[ 1500], 80.00th=[ 1762], 90.00th=[ 2999], 95.00th=[ 5800],
+     | 99.00th=[ 7832], 99.50th=[ 7898], 99.90th=[ 7963], 99.95th=[ 7963],
+     | 99.99th=[ 7963]
+  lat (usec)   : 250=0.20%, 500=0.20%, 750=0.20%, 1000=0.20%
+  lat (msec)   : 2=82.23%, 4=10.16%, 10=6.84%
+  cpu          : usr=88.73%, sys=7.04%, ctx=33, majf=0, minf=267
+  IO depths    : 1=0.2%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=448MiB/s (469MB/s), 448MiB/s-448MiB/s (469MB/s-469MB/s), io=64.0MiB (67.1MB), run=143-143msec
+
+Disk stats (read/write):
+  vdb: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%
+PASS
+

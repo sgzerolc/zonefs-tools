@@ -1,0 +1,32 @@
+## Test 0111: File names and inode numbers (aggr_cnv)
+
+Check file names and their inode numbers
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 22164c4b-5ecb-45c2-9a40-027ee8a98c47
+Resetting sequential zones
+Writing super block
+Checking root inode /home/sam/zonefs-tools/tests/vdb-mnt
+Checking cnv directory inode number
+Checking cnv directory files inode number
+stat: cannot statx '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/1': No such file or directory
+scripts/test_lib: line 252: [: too many arguments
+stat: cannot statx '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/2': No such file or directory
+scripts/test_lib: line 252: [: too many arguments
+stat: cannot statx '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/3': No such file or directory
+scripts/test_lib: line 252: [: too many arguments
+stat: cannot statx '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/4': No such file or directory
+scripts/test_lib: line 252: [: too many arguments
+Checking seq directory inode number
+Checking seq directory files inode number
+PASS
+

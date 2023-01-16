@@ -1,0 +1,32 @@
+## Test 0600: Sequential file write IO error (errors=remount-ro, sync)
+
+Check handling of sequential file write IO error
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 1d802836-e3e3-40e1-869a-7401e35b448f
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000314427 s, 13.0 MB/s
+Write seq file 0 zone directly
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000340274 s, 12.0 MB/s
+Try writing seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000386816 s, 10.6 MB/s
+ --> write 4096 B to /home/sam/zonefs-tools/tests/vda-mnt/seq/0 SUCCESS (should FAIL)
+FAILED
+

@@ -1,0 +1,49 @@
+## Test 0082: Files owner (format set value)
+
+Check for UID 1000, GID 0
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 1000
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b09856f7-346c-4103-a2bd-b2f850f8caf2
+Resetting sequential zones
+Writing super block
+Check for UID 0, GID 1000
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 1000
+  File access permissions: 640
+  FS UUID: 473a7e02-4dfb-48cb-ab3b-362ee1234d61
+Resetting sequential zones
+Writing super block
+Check for UID 1000, GID 2000
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 1000
+  File GID: 2000
+  File access permissions: 640
+  FS UUID: 67037b15-a409-45dd-a162-17a4c7e2d2bc
+Resetting sequential zones
+Writing super block
+PASS
+

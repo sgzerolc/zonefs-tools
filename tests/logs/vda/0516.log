@@ -1,0 +1,39 @@
+## Test 0516: Sysfs seq files active after truncate to 0 (default)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ae049a1f-ef8a-429d-9022-34e9b728c630
+Resetting sequential zones
+Writing super block
+scripts/0516.sh: line 27: n: command not found
+Writing seq file 0
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00173155 s, 606 MB/s
+Writing seq file 1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00195839 s, 535 MB/s
+Writing seq file 2
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.001878 s, 558 MB/s
+Writing seq file 3
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00194247 s, 540 MB/s
+Truncating seq file 0
+Truncating seq file 1
+Truncating seq file 2
+Truncating seq file 3
+PASS
+

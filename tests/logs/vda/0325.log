@@ -1,0 +1,78 @@
+## Test 0325: Sequential file read beyond eof
+
+Check sequential file read beyond eof
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: afcb4f21-f862-4a3c-bcf7-94b6630012ab
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000288164 s, 14.2 MB/s
+0+1 records in
+0+1 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000417445 s, 9.8 MB/s
+Check sequential file read beyond max size
+seqwrite: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.32
+Starting 1 process
+seqwrite: Laying out IO file (1 file / 64MiB)
+
+seqwrite: (groupid=0, jobs=1): err= 0: pid=3764: Mon Jan 16 15:53:59 2023
+  read: IOPS=4571, BW=570MiB/s (598MB/s)(63.9MiB/112msec)
+    slat (usec): min=5, max=100, avg=11.66, stdev= 5.03
+    clat (usec): min=191, max=5000, avg=1518.36, stdev=433.82
+     lat (usec): min=204, max=5009, avg=1530.02, stdev=433.97
+    clat percentiles (usec):
+     |  1.00th=[  783],  5.00th=[ 1385], 10.00th=[ 1401], 20.00th=[ 1418],
+     | 30.00th=[ 1418], 40.00th=[ 1450], 50.00th=[ 1467], 60.00th=[ 1483],
+     | 70.00th=[ 1500], 80.00th=[ 1532], 90.00th=[ 1582], 95.00th=[ 1631],
+     | 99.00th=[ 4948], 99.50th=[ 5014], 99.90th=[ 5014], 99.95th=[ 5014],
+     | 99.99th=[ 5014]
+  write: IOPS=4491, BW=560MiB/s (588MB/s)(63.9MiB/114msec); 0 zone resets
+    slat (usec): min=187, max=681, avg=217.40, stdev=26.44
+    clat (usec): min=449, max=2049, avg=1541.44, stdev=109.94
+     lat (usec): min=656, max=2281, avg=1758.85, stdev=112.28
+    clat percentiles (usec):
+     |  1.00th=[ 1467],  5.00th=[ 1483], 10.00th=[ 1483], 20.00th=[ 1500],
+     | 30.00th=[ 1500], 40.00th=[ 1516], 50.00th=[ 1532], 60.00th=[ 1549],
+     | 70.00th=[ 1565], 80.00th=[ 1582], 90.00th=[ 1598], 95.00th=[ 1631],
+     | 99.00th=[ 1991], 99.50th=[ 2024], 99.90th=[ 2057], 99.95th=[ 2057],
+     | 99.99th=[ 2057]
+  lat (usec)   : 250=0.10%, 500=0.29%, 750=0.29%, 1000=0.39%
+  lat (msec)   : 2=96.78%, 4=1.27%, 10=0.68%
+  fsync/fdatasync/sync_file_range:
+    sync (nsec): min=309622, max=309622, avg=309622.00, stdev= 0.00
+    sync percentiles (usec):
+     |  1.00th=[  310],  5.00th=[  310], 10.00th=[  310], 20.00th=[  310],
+     | 30.00th=[  310], 40.00th=[  310], 50.00th=[  310], 60.00th=[  310],
+     | 70.00th=[  310], 80.00th=[  310], 90.00th=[  310], 95.00th=[  310],
+     | 99.00th=[  310], 99.50th=[  310], 99.90th=[  310], 99.95th=[  310],
+     | 99.99th=[  310]
+  cpu          : usr=86.67%, sys=4.89%, ctx=1033, majf=0, minf=28
+  IO depths    : 1=0.3%, 2=0.4%, 4=0.8%, 8=98.6%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.8%, 8=0.2%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=512,512,0,1 short=1,1,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+   READ: bw=570MiB/s (598MB/s), 570MiB/s-570MiB/s (598MB/s-598MB/s), io=63.9MiB (67.0MB), run=112-112msec
+  WRITE: bw=560MiB/s (588MB/s), 560MiB/s-560MiB/s (588MB/s-588MB/s), io=63.9MiB (67.0MB), run=114-114msec
+
+Disk stats (read/write):
+  vda: ios=512/506, merge=0/7, ticks=73/71, in_queue=144, util=59.79%
+1+0 records in
+1+0 records out
+8192 bytes (8.2 kB, 8.0 KiB) copied, 0.000307694 s, 26.6 MB/s
+PASS
+

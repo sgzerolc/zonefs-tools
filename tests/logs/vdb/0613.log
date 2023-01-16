@@ -1,0 +1,6 @@
+## Test 0613: Sequential file readonly zone (errors=zone-ro, io-err)
+
+Check sequential file on a read-only zone at io-error time
+ --> skipped: null_blk does not support zone_readonly config
+skip
+

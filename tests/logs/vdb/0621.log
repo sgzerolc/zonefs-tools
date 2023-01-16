@@ -1,0 +1,6 @@
+## Test 0621: Sequential file offline zone (errors=remount-ro, io-err)
+
+Check sequential file on an offline zone at io-error time
+ --> skipped: null_blk does not support zone_offline config
+skip
+

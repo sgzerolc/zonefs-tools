@@ -1,0 +1,28 @@
+## Test 0401: Swap file on sequential file
+
+Check swap file on sequential file
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 733ecdbc-f07c-4c26-8d34-d18f65600e8b
+Resetting sequential zones
+Writing super block
+512 IOs done in 37 ms (37002 us)
+    13837 IOPS, 1813.655 MB/s
+mkswap: unable to erase bootbits sectors
+Setting up swapspace version 1, size = 64 MiB (67104768 bytes)
+no label, UUID=50fff39d-5f22-4310-ac9e-5b5bbdbf0495
+512+0 records in
+512+0 records out
+67108864 bytes (67 MB, 64 MiB) copied, 0.12293 s, 546 MB/s
+swapon: /home/sam/zonefs-tools/tests/vda-mnt/seq/0: swapon failed: Invalid argument
+PASS
+

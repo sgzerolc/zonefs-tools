@@ -1,0 +1,7 @@
+## Test 0312: Sequential file explicit-open zone resources
+
+/usr/local/bin/fio
+Check explicit-open mounts
+ --> skipped: No maximum open zone limit
+skip
+

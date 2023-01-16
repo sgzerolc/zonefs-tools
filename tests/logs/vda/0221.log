@@ -1,0 +1,5 @@
+## Test 0221: Conventional file seq read (aggr_cnv, large IOs)
+
+ --> skipped: no conventional files
+skip
+

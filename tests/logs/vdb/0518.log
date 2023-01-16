@@ -1,0 +1,23 @@
+## Test 0518: Sysfs conv files write-open
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 06c7b535-8f7e-4193-8d06-dcd970c832e3
+Resetting sequential zones
+Writing super block
+Check write open
+Opened 5 files from file 0
+Closed 5 files from file 0
+Opened 5 files from file 0
+Closed 5 files from file 0
+PASS
+

@@ -1,0 +1,119 @@
+## Test 0206: Conventional file random write (aggr_cnv)
+
+/usr/local/bin/fio
+Check conventional file random write, aggr_cnv (sync)
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 7efc2699-85c0-432d-9ebf-0b1537c9928a
+Resetting sequential zones
+Writing super block
+cnv_rndwr: (g=0): rw=randwrite, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=psync, iodepth=1
+fio-3.32
+Starting 1 process
+
+cnv_rndwr: (groupid=0, jobs=1): err= 0: pid=3342: Mon Jan 16 20:43:03 2023
+  read: IOPS=1904, BW=238MiB/s (250MB/s)(320MiB/1344msec)
+    clat (usec): min=11, max=53613, avg=242.81, stdev=1066.71
+     lat (usec): min=11, max=53613, avg=242.94, stdev=1066.72
+    clat percentiles (usec):
+     |  1.00th=[   13],  5.00th=[   14], 10.00th=[   15], 20.00th=[   47],
+     | 30.00th=[  186], 40.00th=[  219], 50.00th=[  241], 60.00th=[  269],
+     | 70.00th=[  293], 80.00th=[  322], 90.00th=[  371], 95.00th=[  424],
+     | 99.00th=[  519], 99.50th=[  553], 99.90th=[ 2245], 99.95th=[ 3752],
+     | 99.99th=[53740]
+  write: IOPS=2415, BW=302MiB/s (317MB/s)(320MiB/1060msec); 0 zone resets
+    clat (usec): min=24, max=24226, avg=207.55, stdev=1236.97
+     lat (usec): min=205, max=24410, avg=412.89, stdev=1240.14
+    clat percentiles (usec):
+     |  1.00th=[   26],  5.00th=[   28], 10.00th=[   29], 20.00th=[   31],
+     | 30.00th=[   58], 40.00th=[  105], 50.00th=[  108], 60.00th=[  109],
+     | 70.00th=[  111], 80.00th=[  114], 90.00th=[  120], 95.00th=[  302],
+     | 99.00th=[ 1500], 99.50th=[11469], 99.90th=[21365], 99.95th=[22938],
+     | 99.99th=[24249]
+   bw (  KiB/s): min=36608, max=369181, per=70.59%, avg=218207.00, stdev=168388.30, samples=3
+   iops        : min=  286, max= 2884, avg=1704.67, stdev=1315.43, samples=3
+  lat (usec)   : 20=7.93%, 50=16.84%, 100=4.73%, 250=44.92%, 500=23.42%
+  lat (usec)   : 750=1.21%, 1000=0.10%
+  lat (msec)   : 2=0.39%, 4=0.12%, 10=0.02%, 20=0.23%, 50=0.08%
+  lat (msec)   : 100=0.02%
+  cpu          : usr=50.79%, sys=22.31%, ctx=2290, majf=0, minf=86
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=2560,2560,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=238MiB/s (250MB/s), 238MiB/s-238MiB/s (250MB/s-250MB/s), io=320MiB (336MB), run=1344-1344msec
+  WRITE: bw=302MiB/s (317MB/s), 302MiB/s-302MiB/s (317MB/s-317MB/s), io=320MiB (336MB), run=1060-1060msec
+
+Disk stats (read/write):
+  vdb: ios=1909/264, merge=0/0, ticks=486/8752, in_queue=9238, util=52.06%
+Check conventional file random write, aggr_cnv (async)
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ee094f0a-4a60-4019-9f16-560d816fe3e5
+Resetting sequential zones
+Writing super block
+cnv_rndwr: (g=0): rw=randwrite, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=64
+fio-3.32
+Starting 1 process
+
+cnv_rndwr: (groupid=0, jobs=1): err= 0: pid=3354: Mon Jan 16 20:43:05 2023
+  read: IOPS=2388, BW=299MiB/s (313MB/s)(320MiB/1072msec)
+    slat (usec): min=96, max=2711, avg=202.88, stdev=94.26
+    clat (usec): min=184, max=31531, avg=24194.70, stdev=4088.54
+     lat (usec): min=454, max=31865, avg=24397.58, stdev=4126.00
+    clat percentiles (usec):
+     |  1.00th=[11600],  5.00th=[20579], 10.00th=[20841], 20.00th=[21627],
+     | 30.00th=[21890], 40.00th=[21890], 50.00th=[22414], 60.00th=[24249],
+     | 70.00th=[27657], 80.00th=[28705], 90.00th=[29492], 95.00th=[30016],
+     | 99.00th=[31065], 99.50th=[31327], 99.90th=[31327], 99.95th=[31589],
+     | 99.99th=[31589]
+  write: IOPS=4122, BW=515MiB/s (540MB/s)(320MiB/621msec); 0 zone resets
+    slat (usec): min=210, max=1072, avg=239.82, stdev=71.61
+    clat (usec): min=3, max=35242, avg=14702.40, stdev=2000.21
+     lat (usec): min=267, max=36314, avg=14942.22, stdev=2045.69
+    clat percentiles (usec):
+     |  1.00th=[ 6915],  5.00th=[14091], 10.00th=[14091], 20.00th=[14222],
+     | 30.00th=[14353], 40.00th=[14353], 50.00th=[14484], 60.00th=[14615],
+     | 70.00th=[14746], 80.00th=[15008], 90.00th=[15795], 95.00th=[16319],
+     | 99.00th=[21890], 99.50th=[26608], 99.90th=[33817], 99.95th=[34341],
+     | 99.99th=[35390]
+   bw (  KiB/s): min=143616, max=511744, per=62.10%, avg=327680.00, stdev=260305.81, samples=2
+   iops        : min= 1122, max= 3998, avg=2560.00, stdev=2033.64, samples=2
+  lat (usec)   : 4=0.02%, 250=0.02%, 500=0.02%, 750=0.04%, 1000=0.02%
+  lat (msec)   : 2=0.14%, 4=0.23%, 10=0.62%, 20=49.67%, 50=49.22%
+  cpu          : usr=57.95%, sys=15.32%, ctx=2953, majf=0, minf=84
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.2%, 8=0.3%, 16=0.6%, 32=1.2%, >=64=97.5%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=2560,2560,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=299MiB/s (313MB/s), 299MiB/s-299MiB/s (313MB/s-313MB/s), io=320MiB (336MB), run=1072-1072msec
+  WRITE: bw=515MiB/s (540MB/s), 515MiB/s-515MiB/s (540MB/s-540MB/s), io=320MiB (336MB), run=621-621msec
+
+Disk stats (read/write):
+  vdb: ios=2429/267, merge=0/0, ticks=405/977, in_queue=1382, util=56.64%
+PASS
+

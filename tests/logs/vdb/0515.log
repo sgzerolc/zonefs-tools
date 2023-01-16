@@ -1,0 +1,50 @@
+## Test 0515: Sysfs seq files active after write (default)
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 9753110c-d9e5-473a-8207-9a107f12db1d
+Resetting sequential zones
+Writing super block
+Writing seq file 0
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.0029808 s, 352 MB/s
+Writing seq file 1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00348806 s, 301 MB/s
+Writing seq file 2
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00227097 s, 462 MB/s
+Writing seq file 3
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00253606 s, 413 MB/s
+Filling seq file 0
+63+0 records in
+63+0 records out
+66060288 bytes (66 MB, 63 MiB) copied, 0.104047 s, 635 MB/s
+Filling seq file 1
+63+0 records in
+63+0 records out
+66060288 bytes (66 MB, 63 MiB) copied, 0.11919 s, 554 MB/s
+Filling seq file 2
+63+0 records in
+63+0 records out
+66060288 bytes (66 MB, 63 MiB) copied, 0.112342 s, 588 MB/s
+Filling seq file 3
+63+0 records in
+63+0 records out
+66060288 bytes (66 MB, 63 MiB) copied, 0.110663 s, 597 MB/s
+PASS
+

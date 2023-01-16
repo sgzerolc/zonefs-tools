@@ -1,0 +1,19 @@
+## Test 0085: Files owner (user set value + aggr_cnv)
+
+Check for files UID/GID persistence
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: ff337195-3d3d-4f45-9aa1-e104aa79de2f
+Resetting sequential zones
+Writing super block
+PASS
+

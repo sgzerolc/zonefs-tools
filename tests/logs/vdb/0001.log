@@ -1,0 +1,204 @@
+## Test 0001: mkzonefs (options)
+
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00267295 s, 1.5 MB/s
+Check mkzonefs command: mkzonefs  /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 48d4e9fa-ba0c-44b3-b1b8-9c8a0684289f
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000825475 s, 5.0 MB/s
+Check mkzonefs command: mkzonefs -h /dev/vdb
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000358331 s, 11.4 MB/s
+Check mkzonefs command: mkzonefs --help /dev/vdb
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000292884 s, 14.0 MB/s
+Check mkzonefs command: mkzonefs --help /dev/vdb
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000306586 s, 13.4 MB/s
+Check mkzonefs command: mkzonefs -v /dev/vdb
+Zone 00000: Conventional, sector 0, 131072 sectors
+Zone 00001: Conventional, sector 131072, 131072 sectors
+Zone 00002: Conventional, sector 262144, 131072 sectors
+Zone 00003: Conventional, sector 393216, 131072 sectors
+Zone 00004: Conventional, sector 524288, 131072 sectors
+Zone 00005: Conventional, sector 655360, 131072 sectors
+Zone 00006: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 786432, 131072 sectors, wp sector 786432
+Zone 00007: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 917504, 131072 sectors, wp sector 917504
+Zone 00008: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1048576, 131072 sectors, wp sector 1048576
+Zone 00009: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1179648, 131072 sectors, wp sector 1179648
+Zone 00010: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1310720, 131072 sectors, wp sector 1310720
+Zone 00011: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1441792, 131072 sectors, wp sector 1441792
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 93ed50d5-69f8-4e93-b866-32df7282b56e
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000255052 s, 16.1 MB/s
+Check mkzonefs command: mkzonefs -f /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 5ada5507-7b60-4dd7-8721-0a7d88c5bba1
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000764861 s, 5.4 MB/s
+Check mkzonefs command: mkzonefs -o aggr_cnv /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 0a6ad116-b64a-4fdb-bc84-e76936509430
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000287531 s, 14.2 MB/s
+Check mkzonefs command: mkzonefs -o uid=0 /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 81fd8af4-dde1-4f8e-a370-8222c8406ebf
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000234296 s, 17.5 MB/s
+Check mkzonefs command: mkzonefs -o gid=0 /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: f25ca409-f26e-4e9e-856d-6dfb4867136a
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000326537 s, 12.5 MB/s
+Check mkzonefs command: mkzonefs -o perm=777 /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: 60cf54a4-e6a3-42e5-8237-d181ee1de4d6
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000444261 s, 9.2 MB/s
+Check mkzonefs command: mkzonefs -o aggr_cnv,uid=0,gid=0,perm=777 /dev/vdb
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: f7592ea4-a214-48d2-9cc7-454222f98e54
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -bad-option /dev/vdb
+Invalid option '-bad-option'
+Check mkzonefs command: mkzonefs -o /dev/vdb
+Invalid command line
+Check mkzonefs command: mkzonefs -o invalid_feature /dev/vdb
+Invalid feature string
+Check mkzonefs command: mkzonefs -o invalid,,list /dev/vdb
+Invalid feature string
+PASS
+

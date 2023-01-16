@@ -1,0 +1,49 @@
+## Test 0083: Files owner (format set value + aggr_cnv)
+
+Check for UID 1000, GID 0, aggr_cnv
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 1000
+  File GID: 0
+  File access permissions: 640
+  FS UUID: de53b01f-819f-49be-ae82-727c02e44a6d
+Resetting sequential zones
+Writing super block
+Check for UID 0, GID 1000, aggr_cnv
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 1000
+  File access permissions: 640
+  FS UUID: 198a9d37-888d-4c17-a40c-66bfafe5a49f
+Resetting sequential zones
+Writing super block
+Check for UID 1000, GID 2000, aggr_cnv
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 1000
+  File GID: 2000
+  File access permissions: 640
+  FS UUID: e00dcac2-685a-4b01-8b94-94bc4d74c0ba
+Resetting sequential zones
+Writing super block
+PASS
+

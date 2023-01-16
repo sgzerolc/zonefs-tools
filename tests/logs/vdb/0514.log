@@ -1,0 +1,47 @@
+## Test 0514: Sysfs seq files write-open (explicit-open)
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b6f9bf60-cf30-40ca-950c-53419984ea23
+Resetting sequential zones
+Writing super block
+Check read open
+Opening 1 files for reading
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for reading
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for reading
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for reading
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for reading
+Opened 5 files from file 0
+Closed 5 files from file 0
+Check write open
+Opening 1 files for writing
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for writing
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for writing
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for writing
+Opened 4 files from file 0
+Closed 4 files from file 0
+PASS
+

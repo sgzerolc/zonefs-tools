@@ -1,0 +1,5 @@
+## Test 0220: Conventional file seq read (large IOs)
+
+ --> skipped: no conventional files
+skip
+

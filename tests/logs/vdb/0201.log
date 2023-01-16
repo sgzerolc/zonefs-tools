@@ -1,0 +1,20 @@
+## Test 0201: Conventional file truncate (aggr_cnv)
+
+Check conventional file truncate, aggr_cnv
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b7ddbe3c-fbba-4fa9-8df7-c7848e3e2b75
+Resetting sequential zones
+Writing super block
+truncate: failed to truncate '/home/sam/zonefs-tools/tests/vdb-mnt/cnv/0' at 0 bytes: Operation not permitted
+PASS
+

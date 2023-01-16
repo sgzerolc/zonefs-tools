@@ -1,0 +1,23 @@
+## Test 0302: Sequential file buffered write IO
+
+Check sequential file buffered write IO
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 4101058c-b621-4e51-927b-e2e814d71086
+Resetting sequential zones
+Writing super block
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Input/output error
+1+0 records in
+0+0 records out
+0 bytes copied, 0.0001184 s, 0.0 kB/s
+PASS
+

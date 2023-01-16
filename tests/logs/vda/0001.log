@@ -1,0 +1,171 @@
+## Test 0001: mkzonefs (options)
+
+Check mkzonefs command: mkzonefs  /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: fbd2383d-e421-4f41-b5fe-3845c10502de
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -h /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs --help /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs --help /dev/vda
+Usage: mkzonefs [options] <device path>
+Options:
+  --version     : Print version number and exit
+  --help | -h   : General help message
+  -v            : Verbose output
+  -f            : Force overwrite of existing content
+  -o <features>	: Optional features
+See "man mkzonefs" for more information
+Check mkzonefs command: mkzonefs -v /dev/vda
+Zone 00000: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 0, 131072 sectors, wp sector 0
+Zone 00001: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 131072, 131072 sectors, wp sector 131072
+Zone 00002: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 262144, 131072 sectors, wp sector 262144
+Zone 00003: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 393216, 131072 sectors, wp sector 393216
+Zone 00004: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 524288, 131072 sectors, wp sector 524288
+Zone 00005: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 655360, 131072 sectors, wp sector 655360
+Zone 00006: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 786432, 131072 sectors, wp sector 786432
+Zone 00007: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 917504, 131072 sectors, wp sector 917504
+Zone 00008: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1048576, 131072 sectors, wp sector 1048576
+Zone 00009: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1179648, 131072 sectors, wp sector 1179648
+Zone 00010: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1310720, 131072 sectors, wp sector 1310720
+Zone 00011: type 0x2 (Sequential-write-required), cond 0x1 (Empty), sector 1441792, 131072 sectors, wp sector 1441792
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: a6f8979d-4462-46ef-bd95-41a14f8e6e02
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -f /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: dec23b97-4fed-40c1-b236-5d00707bf2f3
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o aggr_cnv /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: eda221b4-0d87-49ce-a512-99e45ddb03c3
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o uid=0 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 54509cb6-516e-4e47-a95b-4f1d63b64654
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o gid=0 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 1f4596fd-7656-4a94-9470-f5da3f34e108
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o perm=777 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: d6e6eb70-f9a0-40e6-b73e-2d83a5565896
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -o aggr_cnv,uid=0,gid=0,perm=777 /dev/vda
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 777
+  FS UUID: 8461ee8c-7726-4f0b-a57f-8670ff620a2d
+Resetting sequential zones
+Writing super block
+Check mkzonefs command: mkzonefs -bad-option /dev/vda
+Invalid option '-bad-option'
+Check mkzonefs command: mkzonefs -o /dev/vda
+Invalid command line
+Check mkzonefs command: mkzonefs -o invalid_feature /dev/vda
+Invalid feature string
+Check mkzonefs command: mkzonefs -o invalid,,list /dev/vda
+Invalid feature string
+PASS
+

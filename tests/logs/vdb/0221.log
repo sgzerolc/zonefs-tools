@@ -1,0 +1,29 @@
+## Test 0221: Conventional file seq read (aggr_cnv, large IOs)
+
+/usr/bin/dd
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: enabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 855cd546-cfdd-4c7d-a421-c8dffa4e3cd0
+Resetting sequential zones
+Writing super block
+Check conventional file seq read (aggr_cnv, large IOs, buffered)
+bs: 16777216, count: 20, fsz: 335544320
+20+0 records in
+20+0 records out
+335544320 bytes (336 MB, 320 MiB) copied, 0.0952648 s, 3.5 GB/s
+Check conventional file seq read (aggr_cnv, large_IOs, direct)
+bs: 16777216, count: 20, fsz: 335544320
+20+0 records in
+20+0 records out
+335544320 bytes (336 MB, 320 MiB) copied, 0.086845 s, 3.9 GB/s
+PASS
+

@@ -1,0 +1,25 @@
+## Test 0002: mkzonefs (force format)
+
+scripts/0002.sh: line 13: require_program: command not found
+scripts/0002.sh: line 16: mkfs.f2fs: command not found
+scripts/0002.sh: line 16: exit_failed: command not found
+Check mkzonefs with used super block and not forced
+/dev/vda appears to contain an existing filesystem (zonefs)
+Use the option '-f' to overwrite
+Check mkzonefs with used super block and forced
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 9abc71a2-1333-4a66-ad8f-18b2c3ef7e75
+Resetting sequential zones
+Writing super block
+PASS
+

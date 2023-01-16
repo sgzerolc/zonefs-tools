@@ -1,0 +1,26 @@
+## Test 0303: Sequential file overwrite
+
+Check sequential file overwrite
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 7eba4baf-07e0-4c18-9957-0532615fea4e
+Resetting sequential zones
+Writing super block
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00142685 s, 2.9 MB/s
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Invalid argument
+1+0 records in
+0+0 records out
+0 bytes copied, 0.000123004 s, 0.0 kB/s
+PASS
+

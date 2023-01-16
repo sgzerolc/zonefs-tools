@@ -1,0 +1,6 @@
+## Test 0612: Sequential file readonly zone (errors=zone-ro, mount)
+
+Check sequential file on a read-only zone at mount time
+ --> skipped: null_blk does not support zone_readonly config
+skip
+

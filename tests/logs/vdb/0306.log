@@ -1,0 +1,31 @@
+## Test 0306: Sequential file append (sync)
+
+Check sequential file append (sync)
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: e4489994-6c3d-4e7a-bd77-bb434f2fd9e1
+Resetting sequential zones
+Writing super block
+Check sync append writes with O_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000327441 s, 12.5 MB/s
+529 IOs done in 105 ms (105660 us)
+    5006 IOPS, 676.735 MB/s
+Check sync append writes with RWF_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00106671 s, 3.8 MB/s
+529 IOs done in 88 ms (88859 us)
+    5953 IOPS, 804.689 MB/s
+PASS
+

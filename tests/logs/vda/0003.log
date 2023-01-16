@@ -1,0 +1,8 @@
+## Test 0003: mkzonefs (invalid device)
+
+# Trying /dev/console
+/dev/console is not a block device
+# Trying regular block device /dev/nullb0
+nullb0: Not a zoned block device
+PASS
+

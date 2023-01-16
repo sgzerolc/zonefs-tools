@@ -1,0 +1,40 @@
+## Test 0607: Sequential file write IO error (errors=repair, async)
+
+Check handling of sequential file write IO error
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 2f6e333e-a3a1-4a25-b652-0cd1268c8199
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00027865 s, 14.7 MB/s
+Write seq file 0 zone directly
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00034737 s, 11.8 MB/s
+Try writing seq file 0
+00000: WRITE 4096 B at 4096 failed 5 (Input/output error)
+Check permissions
+Check file size and permissions after eviction
+Try reading seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00106497 s, 3.8 MB/s
+Try file truncate to 0 (zone reset)
+Try writing seq file 1
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000398105 s, 10.3 MB/s
+PASS
+

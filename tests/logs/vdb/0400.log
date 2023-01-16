@@ -1,0 +1,21 @@
+## Test 0400: Swap file on conventional file
+
+Check swap file on conventional file
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 85d40c10-61e9-472b-9039-272a9f4562f2
+Resetting sequential zones
+Writing super block
+Setting up swapspace version 1, size = 64 MiB (67104768 bytes)
+no label, UUID=4a7b5c86-938d-42cf-a5ce-8ff763476905
+PASS
+

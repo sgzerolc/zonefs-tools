@@ -1,0 +1,22 @@
+## Test 0510: Sysfs attr after format
+
+/dev/vdb: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  6 conventional zones, 6 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: e46bef77-ec68-44ad-9b0f-ca88b02120d4
+Resetting sequential zones
+Writing super block
+Check max write open seq files
+Check max active seq files
+Check write open seq files count
+Check active seq files count
+PASS
+
