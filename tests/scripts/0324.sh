@@ -18,7 +18,8 @@ zonefs_mkfs "$1"
 zonefs_mount "$1"
 
 bs=$(block_size "$zonefs_mntdir"/seq/0)
-
+#bs=4096
+echo "$bs"
 dd if=/dev/zero of="$zonefs_mntdir"/seq/0 oflag=direct bs="$bs" count=1 || \
 	exit_failed " --> FAILED"
 

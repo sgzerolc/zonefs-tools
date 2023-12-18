@@ -120,10 +120,12 @@ function get_total_zone_capacity_sectors()
 {
 	local total_cap=0
 
+	echo "$zone_sectors" >> /tmp/log
 	# Skip the first zone as it contains the super block
 	while read -r c_hex; do
 		c=$((c_hex))
 		total_cap=$(( total_cap + c ))
+		echo "cap $total_cap" >> /tmp/log
 	done < <(blkzone report -o "$zone_sectors" "$1" | cut -d "," -f3 | cut -d" " -f3)
 
 	echo $total_cap
