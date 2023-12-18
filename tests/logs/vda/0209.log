@@ -1,0 +1,5 @@
+## Test 0209: Conventional file mmap read/write (aggr_cnv)
+
+ --> skipped: no conventional files
+skip
+

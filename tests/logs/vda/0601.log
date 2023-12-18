@@ -1,0 +1,39 @@
+## Test 0601: Sequential file write IO error (errors=remount-ro, async)
+
+Check handling of sequential file write IO error
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: b32ddf3f-8557-462a-9460-e66adacd2f3f
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00221704 s, 1.8 MB/s
+Write seq file 0 zone directly
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.0005473 s, 7.5 MB/s
+Try async writing seq file 0
+00000: WRITE 4096 B at 4096 failed 5 (Input/output error)
+Try file truncate to 0 (zone reset)
+truncate: cannot open '/home/sam/zonefs-tools/tests/vda-mnt/seq/0' for writing: Read-only file system
+Check permissions
+Check file size and permissions after eviction
+Try reading seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00158999 s, 2.6 MB/s
+Try writing seq file 1
+dd: failed to open '/home/sam/zonefs-tools/tests/vda-mnt/seq/1': Read-only file system
+PASS
+

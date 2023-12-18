@@ -1,0 +1,96 @@
+## Test 0514: Sysfs seq files write-open (explicit-open)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 282e3a5d-e294-47ea-81ae-1719f27068b5
+Resetting sequential zones
+Writing super block
+Check read open
+Opening 1 files for reading
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for reading
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for reading
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for reading
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for reading
+Opened 5 files from file 0
+Closed 5 files from file 0
+Opening 6 files for reading
+Opened 6 files from file 0
+Closed 6 files from file 0
+Opening 7 files for reading
+Opened 7 files from file 0
+Closed 7 files from file 0
+Opening 8 files for reading
+Opened 8 files from file 0
+Closed 8 files from file 0
+Opening 9 files for reading
+Opened 9 files from file 0
+Closed 9 files from file 0
+Opening 10 files for reading
+Opened 10 files from file 0
+Closed 10 files from file 0
+Opening 11 files for reading
+Opened 11 files from file 0
+Closed 11 files from file 0
+Opening 12 files for reading
+Open /home/sam/zonefs-tools/tests/vda-mnt/seq/11 failed 2 (No such file or directory)
+scripts/0514.sh: line 44: kill: (6623) - No such process
+Opening 13 files for reading
+Open /home/sam/zonefs-tools/tests/vda-mnt/seq/11 failed 2 (No such file or directory)
+scripts/0514.sh: line 44: kill: (6631) - No such process
+Check write open
+Opening 1 files for writing
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for writing
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for writing
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for writing
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for writing
+Opened 5 files from file 0
+Closed 5 files from file 0
+Opening 6 files for writing
+Opened 6 files from file 0
+Closed 6 files from file 0
+Opening 7 files for writing
+Opened 7 files from file 0
+Closed 7 files from file 0
+Opening 8 files for writing
+Opened 8 files from file 0
+Closed 8 files from file 0
+Opening 9 files for writing
+Opened 9 files from file 0
+Closed 9 files from file 0
+Opening 10 files for writing
+Opened 10 files from file 0
+Closed 10 files from file 0
+Opening 11 files for writing
+Opened 11 files from file 0
+Closed 11 files from file 0
+Opening 12 files for writing
+Open /home/sam/zonefs-tools/tests/vda-mnt/seq/11 failed 2 (No such file or directory)
+scripts/0514.sh: line 60: kill: (6793) - No such process
+nr_active_seq_files is 0 (should be 12)
+FAILED
+

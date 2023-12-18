@@ -1,0 +1,19 @@
+## Test 0080: Files owner (default)
+
+Check for default UID 0 and GID 0
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 1d7bfec8-8065-4664-bb8a-ab70a9afbd8f
+Resetting sequential zones
+Writing super block
+PASS
+

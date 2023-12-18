@@ -1,0 +1,28 @@
+## Test 0305: Sequential file unaligned write (async)
+
+/usr/local/bin/fio
+Check sequential file unaligned write (async IO)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 46d34c2a-2d74-464e-84fb-af2638908258
+Resetting sequential zones
+Writing super block
+seq_wr: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=8
+fio-3.32
+Starting 1 process
+seq_wr: you need to specify size=
+fio: pid=0, err=22/file:filesetup.c:1155, func=total_file_size, error=Invalid argument
+
+
+Run status group 0 (all jobs):
+PASS
+

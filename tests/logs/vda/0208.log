@@ -1,0 +1,5 @@
+## Test 0208: Conventional file mmap read/write
+
+ --> skipped: no conventional files
+skip
+

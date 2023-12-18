@@ -1,0 +1,31 @@
+## Test 0307: Sequential file append (async)
+
+Check sequential file append (async)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: e3bc0ba2-24a6-4b5a-bc50-6a9d94c709ad
+Resetting sequential zones
+Writing super block
+Check append writes with O_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.0015989 s, 2.6 MB/s
+497 IOs done in 132 ms (132184 us)
+    3759 IOPS, 508.219 MB/s
+Check append writes with RWF_APPEND
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.0146714 s, 279 kB/s
+497 IOs done in 264 ms (264948 us)
+    1875 IOPS, 253.553 MB/s
+PASS
+

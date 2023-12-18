@@ -1,0 +1,44 @@
+## Test 0602: Sequential file write IO error (errors=zone-ro, sync)
+
+Check handling of sequential file write IO error
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 2b2752f1-7623-49ef-859a-bda489d75d61
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00233478 s, 1.8 MB/s
+Write seq file 0 zone directly
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00151095 s, 2.7 MB/s
+Try writing seq file 0
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Input/output error
+1+0 records in
+0+0 records out
+0 bytes copied, 0.00473562 s, 0.0 kB/s
+Try file truncate to 0 (zone reset)
+truncate: cannot open '/home/sam/zonefs-tools/tests/vda-mnt/seq/0' for writing: Operation not permitted
+Check permissions
+Check file size and permissions after eviction
+Try reading seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00186441 s, 2.2 MB/s
+Try writing seq file 1
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00141816 s, 2.9 MB/s
+PASS
+

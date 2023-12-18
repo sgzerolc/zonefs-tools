@@ -1,0 +1,25 @@
+## Test 0328: Sequential file dsync write (sync, iovec)
+
+Check sequential file dsync write (sync, iovec)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 7236e841-43bb-4958-97f6-b9743b1fde4a
+Resetting sequential zones
+Writing super block
+Check writes with O_DSYNC and iovecs
+65 IOs done in 1068 ms (1068903 us)
+    60 IOPS, 127.527 MB/s
+Check writes with RWF_DSYNC and iovecs
+65 IOs done in 1204 ms (1204008 us)
+    53 IOPS, 113.217 MB/s
+PASS
+

@@ -1,0 +1,65 @@
+## Test 0517: Sysfs seq files active after truncate to max (default)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: aba305b1-c344-4420-b43a-04ac7fca5366
+Resetting sequential zones
+Writing super block
+Writing seq file 0
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00393731 s, 266 MB/s
+Writing seq file 1
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.0034102 s, 307 MB/s
+Writing seq file 2
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00329886 s, 318 MB/s
+Writing seq file 3
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00333023 s, 315 MB/s
+Writing seq file 4
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00319261 s, 328 MB/s
+Writing seq file 5
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00319446 s, 328 MB/s
+Writing seq file 6
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.0035585 s, 295 MB/s
+Writing seq file 7
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00363783 s, 288 MB/s
+Writing seq file 8
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00372619 s, 281 MB/s
+Writing seq file 9
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00332919 s, 315 MB/s
+Writing seq file 10
+1+0 records in
+1+0 records out
+1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00356991 s, 294 MB/s
+Writing seq file 11
+dd: failed to open '/home/sam/zonefs-tools/tests/vda-mnt/seq/11': No such file or directory
+ --> Write seq file 11 FAILED
+FAILED
+

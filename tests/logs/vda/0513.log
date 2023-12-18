@@ -1,0 +1,109 @@
+## Test 0513: Sysfs seq files write-open (default)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 8c0f10e7-e6ab-455b-b772-18bb229d9f65
+Resetting sequential zones
+Writing super block
+scripts/0513.sh: line 22: [: 12-2: integer expression expected
+Check read open
+Opening 1 files for reading
+nract
+nrwro
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for reading
+nract
+nrwro
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for reading
+nract
+nrwro
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for reading
+nract
+nrwro
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for reading
+nract
+nrwro
+Opened 5 files from file 0
+Closed 5 files from file 0
+Opening 6 files for reading
+nract
+nrwro
+Opened 6 files from file 0
+Closed 6 files from file 0
+Opening 7 files for reading
+nract
+nrwro
+Opened 7 files from file 0
+Closed 7 files from file 0
+Opening 8 files for reading
+nract
+nrwro
+Opened 8 files from file 0
+Closed 8 files from file 0
+Opening 9 files for reading
+nract
+nrwro
+Opened 9 files from file 0
+Closed 9 files from file 0
+Opening 10 files for reading
+nract
+nrwro
+Opened 10 files from file 0
+Closed 10 files from file 0
+Opening 11 files for reading
+nract
+nrwro
+Opened 11 files from file 0
+Closed 11 files from file 0
+Check write open
+Opening 1 files for writing
+Opened 1 file from file 0
+Closed 1 file from file 0
+Opening 2 files for writing
+Opened 2 files from file 0
+Closed 2 files from file 0
+Opening 3 files for writing
+Opened 3 files from file 0
+Closed 3 files from file 0
+Opening 4 files for writing
+Opened 4 files from file 0
+Closed 4 files from file 0
+Opening 5 files for writing
+Opened 5 files from file 0
+Closed 5 files from file 0
+Opening 6 files for writing
+Opened 6 files from file 0
+Closed 6 files from file 0
+Opening 7 files for writing
+Opened 7 files from file 0
+Closed 7 files from file 0
+Opening 8 files for writing
+Opened 8 files from file 0
+Closed 8 files from file 0
+Opening 9 files for writing
+Opened 9 files from file 0
+Closed 9 files from file 0
+Opening 10 files for writing
+Opened 10 files from file 0
+Closed 10 files from file 0
+Opening 11 files for writing
+Opened 11 files from file 0
+Closed 11 files from file 0
+PASS
+

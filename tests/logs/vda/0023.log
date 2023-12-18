@@ -1,0 +1,26 @@
+## Test 0023: mount (options)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 5d31e3b7-af94-436b-9612-56c608795e16
+Resetting sequential zones
+Writing super block
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+mount: /home/sam/zonefs-tools/tests/vda-mnt: wrong fs type, bad option, bad superblock on /dev/vda, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+PASS
+

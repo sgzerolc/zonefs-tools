@@ -1,0 +1,23 @@
+## Test 0311: Sequential file large synchronous write
+
+/usr/local/bin/fio
+Check sequential file sync write bigger than max-append size
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 5bf1eca3-f97b-434b-8648-94cf28842c17
+Resetting sequential zones
+Writing super block
+Using 67112960 IO size
+fio: size too small, must not be less than minimum block size: 67108864 < 67112960
+fio write FAILED
+FAILED
+

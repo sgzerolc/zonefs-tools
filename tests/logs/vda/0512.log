@@ -1,0 +1,54 @@
+## Test 0512: Sysfs seq files active after mount (active zones)
+
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 9f8cd1ed-46d1-4245-a485-69003a9c8546
+Resetting sequential zones
+Writing super block
+scripts/0512.sh: line 23: [: 12-1: integer expression expected
+Writing 4K in 12-1 zones
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000690404 s, 5.9 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00067022 s, 6.1 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000767522 s, 5.3 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000544862 s, 7.5 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000775091 s, 5.3 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000503209 s, 8.1 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000668295 s, 6.1 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00149217 s, 2.7 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000590061 s, 6.9 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000649953 s, 6.3 MB/s
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00146503 s, 2.8 MB/s
+Check active seq files count
+PASS
+

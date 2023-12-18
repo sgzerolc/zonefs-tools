@@ -1,0 +1,9 @@
+zonefs-tests on /dev/vda:
+  12 zones (0 conventional zones, 12 sequential zones)
+  131072 512B sectors zone size (64 MiB)
+  12 max open zones
+  12 max active zones
+Running tests
+  Test 0513: Sysfs seq files write-open (default)                         ... [92mPASS[0m
+
+1 / 1 tests passed (0 skipped, 0 failures)

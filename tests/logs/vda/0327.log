@@ -1,0 +1,25 @@
+## Test 0327: Sequential file dsync write (async)
+
+Check sequential file dsync write (async)
+/dev/vda: 1572864 512-byte sectors (0 GiB)
+  Host-managed device
+  12 zones of 131072 512-byte sectors (64 MiB)
+  0 conventional zones, 12 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  11 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 2053fc4f-e351-4d86-9472-332037d93761
+Resetting sequential zones
+Writing super block
+Check async writes with O_DSYNC
+32 IOs done in 522 ms (522965 us)
+    61 IOPS, 128.323 MB/s
+Check writes with RWF_DSYNC
+32 IOs done in 482 ms (482714 us)
+    66 IOPS, 139.024 MB/s
+PASS
+

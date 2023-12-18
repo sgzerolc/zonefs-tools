@@ -1,0 +1,36 @@
+## Test 0617: Sequential file readonly zone (errors=repair, io-err)
+
+Check sequential file on a read-only zone at io-error time
+/dev/nullb0: 4194304 512-byte sectors (2 GiB)
+  Host-managed device
+  64 zones of 65536 512-byte sectors (32 MiB)
+  10 conventional zones, 54 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  63 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: 304f6381-6c84-4f2d-a3c5-d093d402c2ca
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000273255 s, 15.0 MB/s
+Try writing seq file 0
+dd: error writing '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Input/output error
+1+0 records in
+0+0 records out
+0 bytes copied, 0.00362701 s, 0.0 kB/s
+Try file truncate to 0 (zone reset)
+truncate: cannot open '/home/sam/zonefs-tools/tests/vda-mnt/seq/0' for writing: Operation not permitted
+Check permissions
+Check file size and permissions after eviction
+Write seq file 1
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.00192394 s, 2.1 MB/s
+PASS
+

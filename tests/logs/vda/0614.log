@@ -1,0 +1,31 @@
+## Test 0614: Sequential file readonly zone (errors=zone-offline, mount)
+
+Check sequential file on a read-only zone at mount time
+/dev/nullb0: 4194304 512-byte sectors (2 GiB)
+  Host-managed device
+  64 zones of 65536 512-byte sectors (32 MiB)
+  10 conventional zones, 54 sequential zones
+  0 read-only zones, 0 offline zones
+Format:
+  63 usable zones
+  Aggregate conventional zones: disabled
+  File UID: 0
+  File GID: 0
+  File access permissions: 640
+  FS UUID: dc91d253-f3f4-42ad-bf13-c72a2dd3cf12
+Resetting sequential zones
+Writing super block
+Write seq file 0
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000260911 s, 15.7 MB/s
+Remounting FS with seq file 0 zone as read-only
+Check file size and permissions
+Try writing seq file 0
+dd: failed to open '/home/sam/zonefs-tools/tests/vda-mnt/seq/0': Operation not permitted
+Write seq file 1
+1+0 records in
+1+0 records out
+4096 bytes (4.1 kB, 4.0 KiB) copied, 0.000282838 s, 14.5 MB/s
+PASS
+
